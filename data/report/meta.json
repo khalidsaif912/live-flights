@@ -1,15 +1,7 @@
 {
-<<<<<<< HEAD
-  "status": "live",
-  "message": "Flights updated from live source.",
-  "count": 92,
-  "sourceUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
-  "updatedAt": "2026-04-29T19:22:29+00:00"
-=======
   "status": "fallback_existing",
   "message": "Live source failed; kept existing flights.json. Error: All fetch strategies failed. Last error: No module named 'playwright'",
-  "count": 2,
+  "count": 92,
   "sourceUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
-  "updatedAt": "2026-04-29T19:34:49+00:00"
->>>>>>> dac84d3ad95171edcc5bb04d3123e018997fd83b
+  "updatedAt": "2026-04-29T19:39:29+00:00"
 }
