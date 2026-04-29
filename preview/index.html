@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Flights Preview</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #182033;
+      --muted: #667085;
+      --border: #e6e8ef;
+      --shadow: 0 18px 45px rgba(16, 24, 40, .08);
+      --ok: #067647;
+      --warn: #b54708;
+      --bad: #b42318;
+      --blue: #175cd3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top right, rgba(23, 92, 211, .12), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0;
+    }
+    header {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .04em;
+      font-size: 13px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 46px);
+      line-height: 1.1;
+    }
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 750px;
+    }
+    .status-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .status-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-weight: 700;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      background: #f9fafb;
+    }
+    .pill.ok { color: var(--ok); background: #ecfdf3; border-color: #abefc6; }
+    .pill.warn { color: var(--warn); background: #fffaeb; border-color: #fedf89; }
+    .pill.bad { color: var(--bad); background: #fef3f2; border-color: #fecdca; }
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+    input, select, button {
+      border: 1px solid var(--border);
+      background: #fff;
+      border-radius: 14px;
+      padding: 11px 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    input { flex: 1 1 260px; }
+    button {
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+    .flight {
+      background: rgba(255, 255, 255, .88);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: 0 10px 28px rgba(16, 24, 40, .05);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: start;
+    }
+    .code {
+      font-size: 24px;
+      font-weight: 850;
+      letter-spacing: .02em;
+    }
+    .destination {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .detail {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 7px 9px;
+      color: #344054;
+      font-size: 13px;
+    }
+    .time {
+      text-align: left;
+      direction: ltr;
+      font-size: 22px;
+      font-weight: 850;
+      color: var(--blue);
+      white-space: nowrap;
+    }
+    .empty {
+      background: var(--card);
+      border: 1px dashed #cbd5e1;
+      border-radius: 22px;
+      padding: 34px;
+      color: var(--muted);
+      text-align: center;
+    }
+    footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      direction: ltr;
+      text-align: left;
+    }
+    @media (max-width: 700px) {
+      .status-card, .flight { grid-template-columns: 1fr; }
+      .time { text-align: right; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="eyebrow">MUSCAT AIRPORT LIVE FLIGHTS</div>
+      <h1>معاينة الرحلات</h1>
+      <p class="lead">
+        هذه الصفحة تقرأ البيانات من <b>data/report/flights.json</b> وتعرضها بشكل مبسط.
+        إذا تم حظر المصدر المباشر، ستظهر آخر نسخة محفوظة أو بيانات فارغة مع حالة واضحة.
+      </p>
+    </header>
+
+    <section class="status-card">
+      <div>
+        <div class="status-main">
+          <span id="statusPill" class="pill">Loading...</span>
+          <span id="countPill" class="pill">0 flights</span>
+        </div>
+        <div id="metaText" class="meta">Loading metadata...</div>
+      </div>
+      <button onclick="loadData()">تحديث المعاينة</button>
+    </section>
+
+    <section class="toolbar">
+      <input id="searchInput" type="search" placeholder="ابحث برقم الرحلة أو الوجهة أو شركة الطيران..." />
+      <select id="statusFilter">
+        <option value="">كل الحالات</option>
+      </select>
+    </section>
+
+    <section id="flightsGrid" class="grid"></section>
+
+    <footer>
+      Data files:
+      <code>data/report/flights.json</code> /
+      <code>data/report/meta.json</code>
+    </footer>
+  </main>
+
+  <script>
+    let flights = [];
+    let meta = {};
+
+    const statusPill = document.getElementById("statusPill");
+    const countPill = document.getElementById("countPill");
+    const metaText = document.getElementById("metaText");
+    const grid = document.getElementById("flightsGrid");
+    const searchInput = document.getElementById("searchInput");
+    const statusFilter = document.getElementById("statusFilter");
+
+    function statusClass(status) {
+      if (status === "live") return "ok";
+      if (status === "sample" || status === "fallback_existing") return "warn";
+      if (status === "empty_due_to_error") return "bad";
+      return "";
+    }
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      }[c]));
+    }
+
+    function setMeta() {
+      const status = meta.status || "unknown";
+      statusPill.className = "pill " + statusClass(status);
+      statusPill.textContent = status;
+      countPill.textContent = `${flights.length} flights`;
+      metaText.textContent = `${meta.message || "No metadata message."} Updated: ${meta.updatedAt || "-"}`;
+    }
+
+    function populateStatusFilter() {
+      const current = statusFilter.value;
+      const statuses = [...new Set(flights.map(f => f.status).filter(Boolean))].sort();
+      statusFilter.innerHTML = '<option value="">كل الحالات</option>';
+      for (const s of statuses) {
+        const opt = document.createElement("option");
+        opt.value = s;
+        opt.textContent = s;
+        statusFilter.appendChild(opt);
+      }
+      statusFilter.value = current;
+    }
+
+    function render() {
+      const q = searchInput.value.trim().toLowerCase();
+      const selectedStatus = statusFilter.value;
+
+      const filtered = flights.filter(f => {
+        const haystack = [
+          f.code,
+          f.destination,
+          f.sourceDestination,
+          f.airline,
+          f.status,
+          f.date,
+          f.stdEtd
+        ].join(" ").toLowerCase();
+
+        const matchesSearch = !q || haystack.includes(q);
+        const matchesStatus = !selectedStatus || f.status === selectedStatus;
+        return matchesSearch && matchesStatus;
+      });
+
+      if (!filtered.length) {
+        grid.innerHTML = '<div class="empty">لا توجد رحلات مطابقة.</div>';
+        return;
+      }
+
+      grid.innerHTML = filtered.map(f => `
+        <article class="flight">
+          <div>
+            <div class="code">${escapeHtml(f.code || "-")}</div>
+            <div class="destination">
+              الوجهة: <b>${escapeHtml(f.destination || "-")}</b>
+              ${f.sourceDestination ? ` · ${escapeHtml(f.sourceDestination)}` : ""}
+            </div>
+            <div class="details">
+              <span class="detail">التاريخ: ${escapeHtml(f.date || "-")}</span>
+              <span class="detail">الحالة: ${escapeHtml(f.status || "-")}</span>
+              <span class="detail">الناقل: ${escapeHtml(f.airline || "-")}</span>
+            </div>
+          </div>
+          <div class="time">${escapeHtml(f.stdEtd || "-")}</div>
+        </article>
+      `).join("");
+    }
+
+    async function fetchJson(path, fallback) {
+      try {
+        const res = await fetch(path + "?v=" + Date.now(), { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return await res.json();
+      } catch (e) {
+        console.warn("Failed to load", path, e);
+        return fallback;
+      }
+    }
+
+    async function loadData() {
+      flights = await fetchJson("../data/report/flights.json", []);
+      meta = await fetchJson("../data/report/meta.json", {
+        status: "unknown",
+        message: "Could not load meta.json",
+        updatedAt: "-"
+      });
+
+      if (!Array.isArray(flights)) flights = [];
+      setMeta();
+      populateStatusFilter();
+      render();
+    }
+
+    searchInput.addEventListener("input", render);
+    statusFilter.addEventListener("change", render);
+
+    loadData();
+  </script>
+</body>
+</html>
