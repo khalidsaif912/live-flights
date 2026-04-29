@@ -148,12 +148,28 @@ def parse_line(line: str) -> dict[str, Any] | None:
     }
 
 
-def fetch_html(url: str) -> str:
+def fetch_html(url):
+    import requests
+
     headers = {
-        "User-Agent": "Mozilla/5.0 (compatible; live-flights-fetcher/1.0)",
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0 Safari/537.36"
+        ),
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+        "Referer": "https://www.muscatairport.co.om/en/flight-status?type=2",
+        "Connection": "keep-alive",
     }
-    res = requests.get(url, headers=headers, timeout=TIMEOUT)
+
+    session = requests.Session()
+    session.headers.update(headers)
+
+    # افتح الصفحة الرئيسية أولًا للحصول على cookies
+    session.get("https://www.muscatairport.co.om/", timeout=30)
+
+    res = session.get(url, timeout=30)
     res.raise_for_status()
     return res.text
 
