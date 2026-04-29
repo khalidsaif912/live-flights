@@ -1,7 +1,7 @@
 {
-  "status": "sample",
-  "message": "Sample data. Workflow will replace this when a live fetch succeeds.",
+  "status": "fallback_existing",
+  "message": "Live source failed; kept existing flights.json. Error: 403 Client Error: Forbidden for url: https://www.muscatairport.co.om/flightstatusframe?type=2",
   "count": 2,
   "sourceUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
-  "updatedAt": "2026-04-29T00:00:00+00:00"
+  "updatedAt": "2026-04-29T18:45:50+00:00"
 }
