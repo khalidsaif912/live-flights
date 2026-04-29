@@ -197,7 +197,6 @@ def build_std_etd(scheduled: str, estimated: str) -> str:
     return ""
 
 
-<<<<<<< HEAD
 def request_live_html(url: str) -> str:
     """
     Try to look like a normal browser session.
@@ -205,50 +204,29 @@ def request_live_html(url: str) -> str:
     If the site blocks GitHub Actions IPs, this still may return 403.
     That is expected; main() handles it safely.
     """
-=======
-def fetch_html(url):
-    import requests
-
->>>>>>> 53c87cecf9ea16a4aa5904cebfdda6ce51741fb3
     headers = {
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
-<<<<<<< HEAD
             "Chrome/124.0.0.0 Safari/537.36"
-=======
-            "Chrome/124.0 Safari/537.36"
->>>>>>> 53c87cecf9ea16a4aa5904cebfdda6ce51741fb3
         ),
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
         "Referer": "https://www.muscatairport.co.om/en/flight-status?type=2",
-<<<<<<< HEAD
         "Cache-Control": "no-cache",
         "Pragma": "no-cache",
-=======
->>>>>>> 53c87cecf9ea16a4aa5904cebfdda6ce51741fb3
         "Connection": "keep-alive",
     }
 
     session = requests.Session()
     session.headers.update(headers)
 
-<<<<<<< HEAD
     # First request helps with cookies on some sites.
     session.get(BASE_URL + "/", timeout=30)
 
     response = session.get(url, timeout=30)
     response.raise_for_status()
     return response.text
-=======
-    # افتح الصفحة الرئيسية أولًا للحصول على cookies
-    session.get("https://www.muscatairport.co.om/", timeout=30)
-
-    res = session.get(url, timeout=30)
-    res.raise_for_status()
-    return res.text
->>>>>>> 53c87cecf9ea16a4aa5904cebfdda6ce51741fb3
 
 
 def table_headers(table) -> list[str]:
