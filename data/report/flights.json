@@ -1,20 +1,830 @@
 [
   {
+    "code": "OV771",
+    "date": "29APR",
+    "destination": "Calicut",
+    "stdEtd": "1900",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Calicut"
+  },
+  {
+    "code": "WY921",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1940/1956",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY695",
+    "date": "29APR",
+    "destination": "Dammam",
+    "stdEtd": "2000/1930",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Dammam"
+  },
+  {
+    "code": "WY661",
+    "date": "29APR",
+    "destination": "Doha",
+    "stdEtd": "2010",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Doha"
+  },
+  {
+    "code": "WY611",
+    "date": "29APR",
+    "destination": "Dubai",
+    "stdEtd": "2015",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Dubai"
+  },
+  {
+    "code": "FZ048",
+    "date": "29APR",
+    "destination": "Dubai",
+    "stdEtd": "2045/2112",
+    "status": "Departed",
+    "airline": "flydubai",
+    "sourceDestination": "Dubai"
+  },
+  {
+    "code": "IX164",
+    "date": "29APR",
+    "destination": "Delhi",
+    "stdEtd": "2100/2120",
+    "status": "Departed",
+    "airline": "Air India Express",
+    "sourceDestination": "Delhi"
+  },
+  {
+    "code": "IX712",
+    "date": "29APR",
+    "destination": "Kannur",
+    "stdEtd": "2110",
+    "status": "Departed",
+    "airline": "Air India Express",
+    "sourceDestination": "Kannur"
+  },
+  {
+    "code": "MU2052",
+    "date": "29APR",
+    "destination": "Beijing",
+    "stdEtd": "2115/2135",
+    "status": "Departed",
+    "airline": "China Eastern",
+    "sourceDestination": "Beijing"
+  },
+  {
+    "code": "MS931",
+    "date": "29APR",
+    "destination": "Cairo",
+    "stdEtd": "2120/2200",
+    "status": "Departed",
+    "airline": "Egyptair",
+    "sourceDestination": "Cairo"
+  },
+  {
+    "code": "WY817",
+    "date": "29APR",
+    "destination": "Bangkok",
+    "stdEtd": "2150",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Bangkok"
+  },
+  {
+    "code": "OV497",
+    "date": "29APR",
+    "destination": "Dhaka",
+    "stdEtd": "2215",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Dhaka"
+  },
+  {
+    "code": "OV773",
+    "date": "29APR",
+    "destination": "Calicut",
+    "stdEtd": "2230",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Calicut"
+  },
+  {
+    "code": "OV735",
+    "date": "29APR",
+    "destination": "Hyderabad",
+    "stdEtd": "2230",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Hyderabad"
+  },
+  {
+    "code": "QR1125",
+    "date": "29APR",
+    "destination": "Doha",
+    "stdEtd": "2315",
+    "status": "Scheduled",
+    "airline": "Qatar Airways",
+    "sourceDestination": "Doha"
+  },
+  {
+    "code": "OV783",
+    "date": "29APR",
+    "destination": "Bangalore",
+    "stdEtd": "2320",
+    "status": "Last Call",
+    "airline": "Salam Air",
+    "sourceDestination": "Bangalore"
+  },
+  {
+    "code": "OV705",
+    "date": "29APR",
+    "destination": "Lucknow",
+    "stdEtd": "2320",
+    "status": "Last Call",
+    "airline": "Salam Air",
+    "sourceDestination": "Lucknow"
+  },
+  {
+    "code": "IX550",
+    "date": "29APR",
+    "destination": "Thiruvananthapuram",
+    "stdEtd": "2325",
+    "status": "Last Call",
+    "airline": "Air India Express",
+    "sourceDestination": "Thiruvananthapuram"
+  },
+  {
+    "code": "OV463",
+    "date": "29APR",
+    "destination": "Bangkok",
+    "stdEtd": "2330",
+    "status": "Gate Open",
+    "airline": "Salam Air",
+    "sourceDestination": "Bangkok"
+  },
+  {
+    "code": "6E1268",
+    "date": "29APR",
+    "destination": "Mumbai",
+    "stdEtd": "2355",
+    "status": "Boarding",
+    "airline": "6E",
+    "sourceDestination": "Mumbai"
+  },
+  {
+    "code": "OV505",
+    "date": "29APR",
+    "destination": "Sialkot",
+    "stdEtd": "2355",
+    "status": "Last Call",
+    "airline": "Salam Air",
+    "sourceDestination": "Sialkot"
+  },
+  {
+    "code": "IX236",
+    "date": "29APR",
+    "destination": "Mumbai",
+    "stdEtd": "0015/0032",
+    "status": "Departed",
+    "airline": "Air India Express",
+    "sourceDestination": "Mumbai"
+  },
+  {
+    "code": "WY685",
+    "date": "29APR",
+    "destination": "Riyadh",
+    "stdEtd": "0145",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Riyadh"
+  },
+  {
+    "code": "TK775",
+    "date": "29APR",
+    "destination": "Istanbul",
+    "stdEtd": "0155",
+    "status": "Departed",
+    "airline": "Turkish Airlines",
+    "sourceDestination": "Istanbul"
+  },
+  {
+    "code": "WY251",
+    "date": "29APR",
+    "destination": "Chennai",
+    "stdEtd": "0205",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Chennai"
+  },
+  {
+    "code": "BS322",
+    "date": "29APR",
+    "destination": "Dhaka",
+    "stdEtd": "0200",
+    "status": "Departed",
+    "airline": "BS",
+    "sourceDestination": "Dhaka"
+  },
+  {
+    "code": "WY225",
+    "date": "29APR",
+    "destination": "Cochin",
+    "stdEtd": "0225",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Cochin"
+  },
+  {
+    "code": "WY211",
+    "date": "29APR",
+    "destination": "Thiruvananthapuram",
+    "stdEtd": "0225",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Thiruvananthapuram"
+  },
+  {
+    "code": "WY265",
+    "date": "29APR",
+    "destination": "Lucknow",
+    "stdEtd": "0300",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Lucknow"
+  },
+  {
+    "code": "6E1272",
+    "date": "29APR",
+    "destination": "Cochin",
+    "stdEtd": "0300",
+    "status": "Departed",
+    "airline": "6E",
+    "sourceDestination": "Cochin"
+  },
+  {
+    "code": "WY241",
+    "date": "29APR",
+    "destination": "Delhi",
+    "stdEtd": "0320",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Delhi"
+  },
+  {
+    "code": "WY281",
+    "date": "29APR",
+    "destination": "Bangalore",
+    "stdEtd": "0400",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Bangalore"
+  },
+  {
+    "code": "OV513",
+    "date": "29APR",
+    "destination": "Karachi",
+    "stdEtd": "0405/0338",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Karachi"
+  },
+  {
+    "code": "OV563",
+    "date": "29APR",
+    "destination": "Islamabad",
+    "stdEtd": "2355/0335",
+    "status": "Delayed",
+    "airline": "Salam Air",
+    "sourceDestination": "Islamabad"
+  },
+  {
+    "code": "ET625",
+    "date": "29APR",
+    "destination": "Addis Ababa",
+    "stdEtd": "0425/0445",
+    "status": "Departed",
+    "airline": "Ethiopian Airlines",
+    "sourceDestination": "Addis Ababa"
+  },
+  {
+    "code": "PC831",
+    "date": "29APR",
+    "destination": "Istanbul",
+    "stdEtd": "0435",
+    "status": "Departed",
+    "airline": "Pegasus Airlines",
+    "sourceDestination": "Istanbul"
+  },
+  {
+    "code": "3T263",
+    "date": "29APR",
+    "destination": "Port Sudan",
+    "stdEtd": "0430/0522",
+    "status": "Departed",
+    "airline": "3T",
+    "sourceDestination": "Port Sudan"
+  },
+  {
+    "code": "WY201",
+    "date": "29APR",
+    "destination": "Mumbai",
+    "stdEtd": "0505",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Mumbai"
+  },
+  {
+    "code": "QR1149",
+    "date": "29APR",
+    "destination": "Doha",
+    "stdEtd": "0620",
+    "status": "Departed",
+    "airline": "Qatar Airways",
+    "sourceDestination": "Doha"
+  },
+  {
+    "code": "OV761",
+    "date": "29APR",
+    "destination": "Mumbai",
+    "stdEtd": "0645",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Mumbai"
+  },
+  {
+    "code": "OV401",
+    "date": "29APR",
+    "destination": "Chittagong",
+    "stdEtd": "0115/0722",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Chittagong"
+  },
+  {
+    "code": "OV5041",
+    "date": "29APR",
+    "destination": "Marmul",
+    "stdEtd": "0745",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Marmul"
+  },
+  {
+    "code": "WY317",
+    "date": "29APR",
+    "destination": "Dhaka",
+    "stdEtd": "0825",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Dhaka"
+  },
+  {
+    "code": "WY223",
+    "date": "29APR",
+    "destination": "Cochin",
+    "stdEtd": "0825",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Cochin"
+  },
+  {
+    "code": "OV283",
+    "date": "29APR",
+    "destination": "Jeddah",
+    "stdEtd": "0830",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Jeddah"
+  },
+  {
+    "code": "OV133",
+    "date": "29APR",
+    "destination": "Duqm",
+    "stdEtd": "0830/0847",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Duqm"
+  },
+  {
+    "code": "WY815",
+    "date": "29APR",
+    "destination": "Bangkok",
+    "stdEtd": "0840",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Bangkok"
+  },
+  {
+    "code": "WY823",
+    "date": "29APR",
+    "destination": "Kuala Lumpur",
+    "stdEtd": "0845",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Kuala Lumpur"
+  },
+  {
+    "code": "WY903",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "0845",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "OV101",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "0855",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY843",
+    "date": "29APR",
+    "destination": "Manila",
+    "stdEtd": "0915",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Manila"
+  },
+  {
+    "code": "WY705",
+    "date": "29APR",
+    "destination": "Zanzibar",
+    "stdEtd": "0915",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Zanzibar"
+  },
+  {
+    "code": "WY253",
+    "date": "29APR",
+    "destination": "Chennai",
+    "stdEtd": "0920",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Chennai"
+  },
+  {
+    "code": "OV251",
+    "date": "29APR",
+    "destination": "Fujairah",
+    "stdEtd": "0935",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Fujairah"
+  },
+  {
+    "code": "OV271",
+    "date": "29APR",
+    "destination": "Medina",
+    "stdEtd": "0940/0957",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Medina"
+  },
+  {
+    "code": "OV365",
+    "date": "29APR",
+    "destination": "Nairobi",
+    "stdEtd": "1025",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Nairobi"
+  },
+  {
+    "code": "WY245",
+    "date": "29APR",
+    "destination": "Delhi",
+    "stdEtd": "1025",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Delhi"
+  },
+  {
+    "code": "WY831",
+    "date": "29APR",
+    "destination": "Phuket",
+    "stdEtd": "1030",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Phuket"
+  },
+  {
+    "code": "OV5093",
+    "date": "29APR",
+    "destination": "Mukhaizna",
+    "stdEtd": "1130",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Mukhaizna"
+  },
+  {
+    "code": "6X1128",
+    "date": "29APR",
+    "destination": "Tehran",
+    "stdEtd": "1200/1217",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Tehran"
+  },
+  {
+    "code": "WY905",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1230",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY413",
+    "date": "29APR",
+    "destination": "Amman",
+    "stdEtd": "1300",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Amman"
+  },
+  {
+    "code": "OV285",
+    "date": "29APR",
+    "destination": "Jeddah",
+    "stdEtd": "1310",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Jeddah"
+  },
+  {
+    "code": "FZ042",
+    "date": "29APR",
+    "destination": "Dubai",
+    "stdEtd": "1310/1348",
+    "status": "Departed",
+    "airline": "flydubai",
+    "sourceDestination": "Dubai"
+  },
+  {
     "code": "WY101",
     "date": "29APR",
     "destination": "LHR",
-    "stdEtd": "1415/1430",
-    "status": "Scheduled",
+    "stdEtd": "1320",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "London"
   },
   {
-    "code": "OV247",
+    "code": "WY117",
     "date": "29APR",
-    "destination": "DXB",
+    "destination": "Frankfurt",
+    "stdEtd": "1320",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Frankfurt"
+  },
+  {
+    "code": "WY153",
+    "date": "29APR",
+    "destination": "Zurich",
+    "stdEtd": "1320/1341",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Zurich"
+  },
+  {
+    "code": "OV5043",
+    "date": "29APR",
+    "destination": "Marmul",
+    "stdEtd": "1330",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Marmul"
+  },
+  {
+    "code": "OV103",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1340/1355",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY683",
+    "date": "29APR",
+    "destination": "Riyadh",
+    "stdEtd": "1355",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Riyadh"
+  },
+  {
+    "code": "6X7220",
+    "date": "29APR",
+    "destination": "Shiraz",
+    "stdEtd": "1300/1554",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Shiraz"
+  },
+  {
+    "code": "PF735",
+    "date": "29APR",
+    "destination": "Islamabad",
+    "stdEtd": "1400/1454",
+    "status": "Departed",
+    "airline": "PF",
+    "sourceDestination": "Islamabad"
+  },
+  {
+    "code": "BG122",
+    "date": "29APR",
+    "destination": "Dhaka",
+    "stdEtd": "1410",
+    "status": "Departed",
+    "airline": "Biman Bangladesh Airlines",
+    "sourceDestination": "Dhaka"
+  },
+  {
+    "code": "WY143",
+    "date": "29APR",
+    "destination": "Milano",
+    "stdEtd": "1415",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Milano"
+  },
+  {
+    "code": "WY693",
+    "date": "29APR",
+    "destination": "Dammam",
+    "stdEtd": "1430",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Dammam"
+  },
+  {
+    "code": "WY147",
+    "date": "29APR",
+    "destination": "Rome",
+    "stdEtd": "1430",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Rome"
+  },
+  {
+    "code": "OV213",
+    "date": "29APR",
+    "destination": "Dammam",
+    "stdEtd": "1435",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Dammam"
+  },
+  {
+    "code": "WY405",
+    "date": "29APR",
+    "destination": "Cairo",
+    "stdEtd": "1440/1500",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Cairo"
+  },
+  {
+    "code": "WY675",
+    "date": "29APR",
+    "destination": "Jeddah",
+    "stdEtd": "1450",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Jeddah"
+  },
+  {
+    "code": "6X6811",
+    "date": "29APR",
+    "destination": "Tehran",
+    "stdEtd": "1415/1505",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Tehran"
+  },
+  {
+    "code": "WY183",
+    "date": "29APR",
+    "destination": "Moscow",
+    "stdEtd": "1505",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Moscow"
+  },
+  {
+    "code": "WY679",
+    "date": "29APR",
+    "destination": "Medina",
+    "stdEtd": "1505",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Medina"
+  },
+  {
+    "code": "WY291",
+    "date": "29APR",
+    "destination": "Calicut",
+    "stdEtd": "1510",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Calicut"
+  },
+  {
+    "code": "6X7317",
+    "date": "29APR",
+    "destination": "Tehran",
+    "stdEtd": "1510/1534",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Tehran"
+  },
+  {
+    "code": "OV391",
+    "date": "29APR",
+    "destination": "Port Sudan",
+    "stdEtd": "1520/1554",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Port Sudan"
+  },
+  {
+    "code": "PF733",
+    "date": "29APR",
+    "destination": "Lahore",
     "stdEtd": "1600",
-    "status": "Estimated",
-    "airline": "SalamAir",
-    "sourceDestination": "Dubai"
+    "status": "Departed",
+    "airline": "PF",
+    "sourceDestination": "Lahore"
+  },
+  {
+    "code": "EY695",
+    "date": "29APR",
+    "destination": "Abu Dhabi",
+    "stdEtd": "1710",
+    "status": "Departed",
+    "airline": "Etihad Airways",
+    "sourceDestination": "Abu Dhabi"
+  },
+  {
+    "code": "OV245",
+    "date": "29APR",
+    "destination": "Sharjah",
+    "stdEtd": "1745",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Sharjah"
+  },
+  {
+    "code": "OV105",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1825/1859",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY907",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1830",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY913",
+    "date": "29APR",
+    "destination": "Salalah",
+    "stdEtd": "1840",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah"
+  },
+  {
+    "code": "WY681",
+    "date": "29APR",
+    "destination": "Riyadh",
+    "stdEtd": "1850",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Riyadh"
   }
 ]
