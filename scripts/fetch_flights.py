@@ -405,22 +405,12 @@ def parse_table_flights(html: str) -> list[Flight]:
         if len(cells) < 7:
             continue
 
-<<<<<<< HEAD
         airline     = normalize_space(cells[0].get_text(" "))
         dest_raw    = normalize_space(cells[1].get_text(" "))
         flight_code = normalize_flight_code(cells[2].get_text(" "))
         sched_raw   = normalize_space(cells[3].get_text(" "))
         est_raw     = normalize_space(cells[4].get_text(" "))
         status      = normalize_space(cells[6].get_text(" "))
-=======
-        idx_airline = index_by_keywords(headers, ["airline"])
-        idx_dest    = index_by_keywords(headers, ["to", "destination"])
-        idx_flight  = index_by_keywords(headers, ["flight"])
-        idx_sched   = index_by_keywords(headers, ["scheduled", "std"])
-        idx_est     = index_by_keywords(headers, ["estimated", "etd"])
-        idx_status  = index_by_keywords(headers, ["status"])
-        idx_date    = index_by_keywords(headers, ["date"])
->>>>>>> dac84d3ad95171edcc5bb04d3123e018997fd83b
 
         if not re.match(r"^[A-Z0-9]{2,3}\d{1,5}[A-Z]?$", flight_code):
             continue
@@ -442,7 +432,6 @@ def parse_table_flights(html: str) -> list[Flight]:
 
         dest, source_dest = normalize_destination(dest_raw)
 
-<<<<<<< HEAD
         flights.append(Flight(
             code=flight_code,
             date=date_key,
@@ -452,23 +441,6 @@ def parse_table_flights(html: str) -> list[Flight]:
             airline=airline,
             sourceDestination=source_dest,
         ))
-=======
-            scheduled = cells[idx_sched] if idx_sched is not None and idx_sched < len(cells) else ""
-            estimated = cells[idx_est]   if idx_est  is not None and idx_est  < len(cells) else ""
-            date_raw  = cells[idx_date]  if idx_date is not None and idx_date < len(cells) else ""
-            airline   = cells[idx_airline] if idx_airline is not None and idx_airline < len(cells) else ""
-            status    = cells[idx_status]  if idx_status  is not None and idx_status  < len(cells) else ""
-
-            flights.append(Flight(
-                code=flight_code,
-                date=normalize_date_key(date_raw),
-                destination=dest,
-                stdEtd=build_std_etd(scheduled, estimated),
-                status=status,
-                airline=airline,
-                sourceDestination=source_dest,
-            ))
->>>>>>> dac84d3ad95171edcc5bb04d3123e018997fd83b
 
     return dedupe_flights(flights)
 
