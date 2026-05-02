@@ -1,0 +1,41 @@
+{
+  "flight": "3T263",
+  "date": "01MAY",
+  "destination": "PZU",
+  "items": [
+    {
+      "awb": "524-00019784",
+      "pcs": 6,
+      "kgs": 160.0,
+      "description": "PERSONAL EFFECTS",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "524-00019876",
+      "pcs": 21,
+      "kgs": 487.0,
+      "description": "IMITATED JEWLER",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "524-00019880",
+      "pcs": 1,
+      "kgs": 114.0,
+      "description": "DRILLING CONSUMA",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "524-00019935",
+      "pcs": 60,
+      "kgs": 555.0,
+      "description": "FAST TEST KIT",
+      "reason": "SPACE"
+    }
+  ],
+  "totals": {
+    "pcs": 96,
+    "kgs": 1400.0
+  },
+  "fetchedAt": "2026-05-02T16:57:31.909752+04:00",
+  "sourceUrl": "https://omanair-my.sharepoint.com/:u:/p/8715_hq/IQAhl_w3GIpTR5hhL-y1Gb9lAQsmsCwNAzKNDxjqHrlmXq4?download=1"
+}
