@@ -1,0 +1,48 @@
+{
+  "flight": "BG122",
+  "date": "06-MAY",
+  "destination": "CGP",
+  "items": [
+    {
+      "awb": "997-67172162",
+      "pcs": 5,
+      "kgs": 110.0,
+      "description": "P. EFFECTS",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "997-67172195",
+      "pcs": 5,
+      "kgs": 110.0,
+      "description": "P. EFFECTS",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "997-67172206",
+      "pcs": 4,
+      "kgs": 110.0,
+      "description": "P. EFFECTS",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "997-67172210",
+      "pcs": 4,
+      "kgs": 110.0,
+      "description": "P. EFFECTS",
+      "reason": "SPACE"
+    },
+    {
+      "awb": "997-67172276",
+      "pcs": 6,
+      "kgs": 110.0,
+      "description": "P. EFFECTS",
+      "reason": "SPACE"
+    }
+  ],
+  "totals": {
+    "pcs": 24,
+    "kgs": 550.0
+  },
+  "fetchedAt": "2026-05-06T15:18:17.987139+04:00",
+  "sourceUrl": "https://omanair-my.sharepoint.com/:u:/p/8715_hq/IQAhl_w3GIpTR5hhL-y1Gb9lAQsmsCwNAzKNDxjqHrlmXq4?download=1"
+}
