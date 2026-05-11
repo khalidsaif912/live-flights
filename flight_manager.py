@@ -379,17 +379,39 @@ def parse_flights(html: str) -> list[Flight]:
 # فلترة وتصنيف الرحلات
 # ══════════════════════════════════════════════════════════════════════════════
 
-def filter_next_24_hours(flights: list[Flight], now: datetime | None = None) -> list[Flight]:
-    """الاحتفاظ فقط بالرحلات خلال 24 ساعة القادمة"""
+def parse_flight_datetime(value: str) -> datetime | None:
+    """تحليل وقت الرحلة من ISO أو من صيغة المطار وإرجاعه بتوقيت مسقط"""
+    s = normalize_space(value)
+    if not s:
+        return None
+
+    try:
+        dt = datetime.fromisoformat(s.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=LOCAL_TZ)
+        return dt.astimezone(LOCAL_TZ)
+    except ValueError:
+        return parse_airport_datetime(s)
+
+
+def filter_today_flights(flights: list[Flight], now: datetime | None = None) -> list[Flight]:
+    """الاحتفاظ فقط بالرحلات المجدولة اليوم من 00:00 إلى 23:59 بتوقيت مسقط"""
     now = now or local_now()
-    end = now + timedelta(hours=24)
+    start_of_day = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    end_of_day = start_of_day + timedelta(days=1)
+    today_key = date_key_from_datetime(now)
     out: list[Flight] = []
-    
+
     for flight in flights:
-        dt = parse_airport_datetime(flight.scheduledAt) or parse_airport_datetime(flight.estimatedAt)
-        if dt and now <= dt <= end:
+        dt = parse_flight_datetime(flight.scheduledAt) or parse_flight_datetime(flight.estimatedAt)
+        if dt and start_of_day <= dt < end_of_day:
             out.append(flight)
-    
+            continue
+
+        # احتياطياً: بعض السجلات قد لا تحمل وقت ISO كامل لكن تاريخها يطابق اليوم.
+        if normalize_date_key(flight.date) == today_key:
+            out.append(flight)
+
     return out
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -571,8 +593,8 @@ def main() -> int:
         
         logger.info(f"✅ تم جلب {len(flights)} رحلة")
         
-        # فلترة الرحلات (24 ساعة القادمة)
-        live_flights = filter_next_24_hours(flights)
+        # فلترة رحلات اليوم الكامل (00:00 - 23:59)
+        live_flights = filter_today_flights(flights)
         live_payload = [asdict(f) for f in live_flights]
         
         # جميع الرحلات للأرشيف
@@ -586,12 +608,12 @@ def main() -> int:
         write_json(LIVE_JSON, live_payload)
         write_json(ARCHIVE_JSON, archive_payload)
         
-        logger.info(f"💾 الرحلات المباشرة: {len(live_payload)}")
+        logger.info(f"💾 رحلات اليوم: {len(live_payload)}")
         logger.info(f"📚 الأرشيف الكامل: {len(archive_payload)}")
         
         # تصدير إلى Excel
         if HAS_EXCEL:
-            create_excel(live_payload, LIVE_EXCEL, "الرحلات المباشرة")
+            create_excel(live_payload, LIVE_EXCEL, "رحلات اليوم")
             create_excel(archive_payload, ARCHIVE_EXCEL, "أرشيف الرحلات")
         
         # حفظ معلومات التحديث

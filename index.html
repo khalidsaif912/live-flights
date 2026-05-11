@@ -238,7 +238,7 @@
           <div class="value" id="statusValue">...</div>
         </div>
         <div class="card">
-          <div class="label">الرحلات الحالية</div>
+          <div class="label">رحلات اليوم</div>
           <div class="value" id="liveCount">0</div>
         </div>
         <div class="card">
@@ -260,7 +260,7 @@
 
     <section class="panel">
       <div class="tabs">
-        <button class="tab active" data-mode="live">الرحلات الحالية</button>
+        <button class="tab active" data-mode="live">رحلات اليوم</button>
         <button class="tab" data-mode="archive">الأرشيف الكامل</button>
       </div>
 
@@ -382,7 +382,7 @@
         const emptyText = currentRows().length
           ? "لا توجد نتائج مطابقة للبحث أو التصفية."
           : state.mode === "live"
-            ? "لا توجد رحلات حالية في ملف live_flights.json الآن."
+            ? "لا توجد رحلات ليوم اليوم في ملف live_flights.json الآن."
             : "ملف الأرشيف فارغ.";
         tableBody.innerHTML = `<tr><td colspan="9" class="empty">${emptyText}</td></tr>`;
         return;
