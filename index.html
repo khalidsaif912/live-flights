@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة رحلات مطار مسقط</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #667085;
+      --line: #dde3ee;
+      --brand: #1d4ed8;
+      --brand-soft: #dbeafe;
+      --ok: #166534;
+      --ok-soft: #dcfce7;
+      --warn: #92400e;
+      --warn-soft: #fef3c7;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Tahoma, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero,
+    .panel,
+    .table-wrap {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow {
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .card .label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .card .value {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .status-row,
+    .toolbar,
+    .tabs {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .status-row {
+      margin-top: 16px;
+    }
+
+    .pill,
+    .tab {
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1px solid transparent;
+    }
+
+    .pill {
+      background: #eef2ff;
+      color: #3730a3;
+    }
+
+    .pill.ok {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
+
+    .pill.warn {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+
+    .panel {
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .tabs {
+      margin-bottom: 14px;
+    }
+
+    .tab {
+      cursor: pointer;
+      background: #eef2f7;
+      color: #334155;
+      border-color: transparent;
+    }
+
+    .tab.active {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .toolbar input,
+    .toolbar select {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 14px;
+      min-height: 44px;
+    }
+
+    .toolbar input {
+      flex: 1 1 280px;
+    }
+
+    .toolbar select {
+      flex: 0 0 180px;
+    }
+
+    .hint {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .table-wrap {
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 920px;
+    }
+
+    th, td {
+      text-align: right;
+      padding: 14px 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f8fafc;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    tr:hover td {
+      background: #fafcff;
+    }
+
+    .empty,
+    .error {
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .error {
+      color: #991b1b;
+    }
+
+    code {
+      background: #eef2f7;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">MUSCAT AIRPORT FLIGHTS</div>
+      <h1>لوحة عرض النتائج</h1>
+      <p class="lead">
+        صفحة بسيطة تعرض ناتج تشغيل <code>flight_manager.py</code> من ملفات <code>flight_data</code>.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="label">حالة التحديث</div>
+          <div class="value" id="statusValue">...</div>
+        </div>
+        <div class="card">
+          <div class="label">الرحلات الحالية</div>
+          <div class="value" id="liveCount">0</div>
+        </div>
+        <div class="card">
+          <div class="label">إجمالي الأرشيف</div>
+          <div class="value" id="archiveCount">0</div>
+        </div>
+        <div class="card">
+          <div class="label">آخر تحديث</div>
+          <div class="value" id="updatedAt" style="font-size:18px">-</div>
+        </div>
+      </div>
+
+      <div class="status-row">
+        <span id="statusPill" class="pill">Loading...</span>
+        <span class="pill">المصدر: <span id="sourceUrl">-</span></span>
+        <span class="pill">المنطقة الزمنية: <span id="timezone">-</span></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="tabs">
+        <button class="tab active" data-mode="live">الرحلات الحالية</button>
+        <button class="tab" data-mode="archive">الأرشيف الكامل</button>
+      </div>
+
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="ابحث برقم الرحلة أو الوجهة أو شركة الطيران أو الحالة">
+        <select id="statusFilter">
+          <option value="">كل الحالات</option>
+        </select>
+      </div>
+
+      <div class="hint" id="hintText">
+        إذا فتحت الصفحة مباشرة من المتصفح بصيغة <code>file://</code> فقد يمنع المتصفح قراءة ملفات JSON.
+        شغّل خادمًا محليًا مثل: <code>python -m http.server 8000</code> ثم افتح <code>http://localhost:8000</code>.
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>رقم الرحلة</th>
+            <th>التاريخ</th>
+            <th>الوجهة</th>
+            <th>الناقل</th>
+            <th>الوقت</th>
+            <th>الحالة</th>
+            <th>البوابة</th>
+            <th>المبنى</th>
+            <th>آخر تحديث</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <tr><td colspan="9" class="empty">جاري تحميل البيانات...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    const state = {
+      meta: {},
+      live: [],
+      archive: [],
+      mode: "live",
+    };
+
+    const statusValue = document.getElementById("statusValue");
+    const liveCount = document.getElementById("liveCount");
+    const archiveCount = document.getElementById("archiveCount");
+    const updatedAt = document.getElementById("updatedAt");
+    const statusPill = document.getElementById("statusPill");
+    const sourceUrl = document.getElementById("sourceUrl");
+    const timezone = document.getElementById("timezone");
+    const tableBody = document.getElementById("tableBody");
+    const searchInput = document.getElementById("searchInput");
+    const statusFilter = document.getElementById("statusFilter");
+    const tabs = [...document.querySelectorAll(".tab")];
+
+    function escapeHtml(value) {
+      return String(value ?? "").replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        "\"": "&quot;",
+        "'": "&#039;",
+      }[c]));
+    }
+
+    function formatDate(value) {
+      if (!value) return "-";
+      const d = new Date(value);
+      return Number.isNaN(d.getTime()) ? value : d.toLocaleString("ar");
+    }
+
+    function currentRows() {
+      return state.mode === "live" ? state.live : state.archive;
+    }
+
+    function currentFilteredRows() {
+      const q = searchInput.value.trim().toLowerCase();
+      const selectedStatus = statusFilter.value;
+
+      return currentRows().filter((row) => {
+        const haystack = [
+          row.code,
+          row.date,
+          row.destination,
+          row.sourceDestination,
+          row.airline,
+          row.status,
+          row.stdEtd,
+          row.gate,
+          row.terminal,
+        ].join(" ").toLowerCase();
+
+        const matchesText = !q || haystack.includes(q);
+        const matchesStatus = !selectedStatus || (row.status || "") === selectedStatus;
+        return matchesText && matchesStatus;
+      });
+    }
+
+    function populateStatusFilter() {
+      const currentValue = statusFilter.value;
+      const statuses = [...new Set(currentRows().map((f) => f.status).filter(Boolean))].sort();
+      statusFilter.innerHTML = '<option value="">كل الحالات</option>';
+      for (const status of statuses) {
+        const option = document.createElement("option");
+        option.value = status;
+        option.textContent = status;
+        statusFilter.appendChild(option);
+      }
+      statusFilter.value = statuses.includes(currentValue) ? currentValue : "";
+    }
+
+    function renderTable() {
+      const rows = currentFilteredRows();
+
+      if (!rows.length) {
+        const emptyText = currentRows().length
+          ? "لا توجد نتائج مطابقة للبحث أو التصفية."
+          : state.mode === "live"
+            ? "لا توجد رحلات حالية في ملف live_flights.json الآن."
+            : "ملف الأرشيف فارغ.";
+        tableBody.innerHTML = `<tr><td colspan="9" class="empty">${emptyText}</td></tr>`;
+        return;
+      }
+
+      tableBody.innerHTML = rows.map((row) => `
+        <tr>
+          <td><strong>${escapeHtml(row.code || "-")}</strong></td>
+          <td>${escapeHtml(row.date || "-")}</td>
+          <td>
+            <div>${escapeHtml(row.destination || "-")}</div>
+            <div style="color:#667085;font-size:12px">${escapeHtml(row.sourceDestination || "")}</div>
+          </td>
+          <td>${escapeHtml(row.airline || "-")}</td>
+          <td>${escapeHtml(row.stdEtd || "-")}</td>
+          <td>${escapeHtml(row.status || "-")}</td>
+          <td>${escapeHtml(row.gate || "-")}</td>
+          <td>${escapeHtml(row.terminal || "-")}</td>
+          <td>${escapeHtml(formatDate(row.lastUpdated || row.firstSeen || ""))}</td>
+        </tr>
+      `).join("");
+    }
+
+    function renderMeta() {
+      const meta = state.meta || {};
+      const status = meta.status || "unknown";
+
+      statusValue.textContent = status;
+      liveCount.textContent = meta.liveFlightsCount ?? state.live.length ?? 0;
+      archiveCount.textContent = meta.archiveFlightsCount ?? state.archive.length ?? 0;
+      updatedAt.textContent = formatDate(meta.updatedAt);
+      sourceUrl.textContent = meta.sourceUrl || "-";
+      timezone.textContent = meta.timezone || "-";
+
+      statusPill.textContent = meta.message || status;
+      statusPill.className = "pill";
+      if (status === "success" || status === "live") {
+        statusPill.classList.add("ok");
+      } else {
+        statusPill.classList.add("warn");
+      }
+    }
+
+    function setMode(mode) {
+      state.mode = mode;
+      tabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.mode === mode));
+      populateStatusFilter();
+      renderTable();
+    }
+
+    async function fetchJson(path, fallback) {
+      const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} for ${path}`);
+      }
+      const data = await response.json();
+      return data ?? fallback;
+    }
+
+    async function loadData() {
+      try {
+        const [meta, live, archive] = await Promise.all([
+          fetchJson("./flight_data/metadata.json", {}),
+          fetchJson("./flight_data/live_flights.json", []),
+          fetchJson("./flight_data/archive_flights.json", []),
+        ]);
+
+        state.meta = meta || {};
+        state.live = Array.isArray(live) ? live : [];
+        state.archive = Array.isArray(archive) ? archive : [];
+
+        renderMeta();
+        setMode("live");
+      } catch (error) {
+        tableBody.innerHTML = `
+          <tr>
+            <td colspan="9" class="error">
+              تعذر قراءة ملفات JSON. افتح الصفحة عبر خادم محلي أو تأكد من وجود ملفات <code>flight_data</code>.
+            </td>
+          </tr>
+        `;
+        statusValue.textContent = "error";
+        statusPill.textContent = error.message;
+        statusPill.className = "pill warn";
+      }
+    }
+
+    searchInput.addEventListener("input", renderTable);
+    statusFilter.addEventListener("change", renderTable);
+    tabs.forEach((tab) => tab.addEventListener("click", () => setMode(tab.dataset.mode)));
+
+    loadData();
+  </script>
+</body>
+</html>
