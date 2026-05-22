@@ -4,7 +4,7 @@
     "date": "22MAY",
     "destination": "Sialkot",
     "stdEtd": "2355",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "Salam Air",
     "sourceDestination": "Sialkot",
     "scheduledAt": "2026-05-22T23:55:00+04:00",
@@ -12,7 +12,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -20,7 +20,7 @@
     "date": "22MAY",
     "destination": "Dhaka",
     "stdEtd": "2355",
-    "status": "Scheduled",
+    "status": "Gate Open",
     "airline": "Salam Air",
     "sourceDestination": "Dhaka",
     "scheduledAt": "2026-05-22T23:55:00+04:00",
@@ -28,23 +28,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
     "code": "6E1268",
     "date": "22MAY",
     "destination": "Mumbai",
-    "stdEtd": "2355/0030",
+    "stdEtd": "2355/0215",
     "status": "Delayed",
     "airline": "6E",
     "sourceDestination": "Mumbai",
     "scheduledAt": "2026-05-22T23:55:00+04:00",
-    "estimatedAt": "2026-05-23T00:30:00+04:00",
+    "estimatedAt": "2026-05-23T02:15:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -52,7 +52,7 @@
     "date": "22MAY",
     "destination": "Bahrain",
     "stdEtd": "2355",
-    "status": "Scheduled",
+    "status": "Gate Open",
     "airline": "Gulf Air",
     "sourceDestination": "Bahrain",
     "scheduledAt": "2026-05-22T23:55:00+04:00",
@@ -60,7 +60,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -68,7 +68,7 @@
     "date": "22MAY",
     "destination": "Abu Dhabi",
     "stdEtd": "2350",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Etihad Airways",
     "sourceDestination": "Abu Dhabi",
     "scheduledAt": "2026-05-22T23:50:00+04:00",
@@ -76,7 +76,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -84,7 +84,7 @@
     "date": "22MAY",
     "destination": "Phuket",
     "stdEtd": "2350",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "Oman Air",
     "sourceDestination": "Phuket",
     "scheduledAt": "2026-05-22T23:50:00+04:00",
@@ -92,39 +92,39 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
     "code": "IX550",
     "date": "22MAY",
     "destination": "Thiruvananthapuram",
-    "stdEtd": "2325",
-    "status": "Scheduled",
+    "stdEtd": "2325/2341",
+    "status": "Departed",
     "airline": "Air India Express",
     "sourceDestination": "Thiruvananthapuram",
     "scheduledAt": "2026-05-22T23:25:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-05-22T23:41:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
     "code": "OV783",
     "date": "22MAY",
     "destination": "Bangalore",
-    "stdEtd": "2320",
-    "status": "Scheduled",
+    "stdEtd": "2320/2353",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Bangalore",
     "scheduledAt": "2026-05-22T23:20:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-05-22T23:53:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -132,7 +132,7 @@
     "date": "22MAY",
     "destination": "DOH",
     "stdEtd": "2315",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Qatar Airways",
     "sourceDestination": "Doha",
     "scheduledAt": "2026-05-22T23:15:00+04:00",
@@ -140,7 +140,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -148,7 +148,7 @@
     "date": "22MAY",
     "destination": "Islamabad",
     "stdEtd": "2300",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Islamabad",
     "scheduledAt": "2026-05-22T23:00:00+04:00",
@@ -156,7 +156,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -164,7 +164,7 @@
     "date": "22MAY",
     "destination": "Calicut",
     "stdEtd": "2230",
-    "status": "Last Call",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Calicut",
     "scheduledAt": "2026-05-22T22:30:00+04:00",
@@ -172,23 +172,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
     "code": "OV735",
     "date": "22MAY",
     "destination": "Hyderabad",
-    "stdEtd": "2230",
-    "status": "Boarding",
+    "stdEtd": "2230/2306",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Hyderabad",
     "scheduledAt": "2026-05-22T22:30:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-05-22T23:06:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -204,7 +204,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -212,7 +212,7 @@
     "date": "22MAY",
     "destination": "Colombo",
     "stdEtd": "2215",
-    "status": "Last Call",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Colombo",
     "scheduledAt": "2026-05-22T22:15:00+04:00",
@@ -220,7 +220,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -236,7 +236,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -252,7 +252,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -268,7 +268,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -284,23 +284,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
     "code": "MS931",
     "date": "22MAY",
     "destination": "Cairo",
-    "stdEtd": "2120/2151",
-    "status": "Gate Closed",
+    "stdEtd": "2120/2221",
+    "status": "Departed",
     "airline": "Egyptair",
     "sourceDestination": "Cairo",
     "scheduledAt": "2026-05-22T21:20:00+04:00",
-    "estimatedAt": "2026-05-22T21:51:00+04:00",
+    "estimatedAt": "2026-05-22T22:21:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -316,7 +316,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -332,7 +332,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -348,7 +348,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -364,7 +364,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -380,7 +380,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -396,7 +396,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -412,7 +412,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -428,7 +428,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -444,7 +444,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -460,7 +460,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -476,7 +476,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -492,7 +492,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -508,7 +508,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -524,7 +524,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -540,7 +540,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -556,7 +556,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -572,7 +572,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -588,7 +588,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -604,7 +604,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -620,7 +620,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -636,7 +636,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -652,7 +652,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -668,7 +668,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -684,7 +684,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -700,7 +700,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -716,7 +716,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -732,7 +732,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -748,7 +748,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -764,7 +764,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -780,7 +780,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -796,7 +796,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -812,7 +812,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -828,7 +828,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -844,7 +844,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -860,7 +860,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -876,7 +876,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -892,7 +892,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -908,7 +908,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -924,7 +924,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -940,7 +940,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -956,7 +956,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -972,7 +972,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -988,7 +988,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1004,7 +1004,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1020,7 +1020,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1036,7 +1036,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1052,7 +1052,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1068,7 +1068,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1084,7 +1084,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1100,7 +1100,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1116,7 +1116,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1132,7 +1132,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1148,7 +1148,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1164,7 +1164,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1180,7 +1180,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1196,7 +1196,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1212,7 +1212,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1228,7 +1228,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1244,7 +1244,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1260,7 +1260,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1276,7 +1276,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1292,7 +1292,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1308,7 +1308,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1324,7 +1324,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1340,7 +1340,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1356,7 +1356,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1372,7 +1372,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1388,7 +1388,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1404,7 +1404,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1420,7 +1420,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1436,7 +1436,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1452,7 +1452,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1468,7 +1468,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1484,7 +1484,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1500,7 +1500,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1516,7 +1516,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1532,7 +1532,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1548,7 +1548,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1564,7 +1564,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1580,7 +1580,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1596,7 +1596,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1612,7 +1612,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1628,7 +1628,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1644,7 +1644,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
@@ -1660,7 +1660,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-05-22T18:01:37+00:00",
+    "lastUpdated": "2026-05-22T20:04:34+00:00",
     "firstSeen": "2026-05-22T00:11:52+00:00"
   },
   {
