@@ -4,7 +4,7 @@
     "date": "17JUN",
     "destination": "Mumbai",
     "stdEtd": "2355",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "6E",
     "sourceDestination": "Mumbai",
     "scheduledAt": "2026-06-17T23:55:00+04:00",
@@ -12,7 +12,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -20,7 +20,7 @@
     "date": "17JUN",
     "destination": "Bahrain",
     "stdEtd": "2355",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "Gulf Air",
     "sourceDestination": "Bahrain",
     "scheduledAt": "2026-06-17T23:55:00+04:00",
@@ -28,7 +28,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -36,7 +36,7 @@
     "date": "17JUN",
     "destination": "Abu Dhabi",
     "stdEtd": "2350",
-    "status": "Scheduled",
+    "status": "Gate Closed",
     "airline": "Etihad Airways",
     "sourceDestination": "Abu Dhabi",
     "scheduledAt": "2026-06-17T23:50:00+04:00",
@@ -44,7 +44,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -52,7 +52,7 @@
     "date": "17JUN",
     "destination": "Bangkok",
     "stdEtd": "2330",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "Salam Air",
     "sourceDestination": "Bangkok",
     "scheduledAt": "2026-06-17T23:30:00+04:00",
@@ -60,23 +60,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
     "code": "OV783",
     "date": "17JUN",
     "destination": "Bangalore",
-    "stdEtd": "2320",
+    "stdEtd": "2320/2341",
     "status": "Scheduled",
     "airline": "Salam Air",
     "sourceDestination": "Bangalore",
     "scheduledAt": "2026-06-17T23:20:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-06-17T23:41:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -84,7 +84,7 @@
     "date": "17JUN",
     "destination": "Lucknow",
     "stdEtd": "2320",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Lucknow",
     "scheduledAt": "2026-06-17T23:20:00+04:00",
@@ -92,23 +92,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
     "code": "IX164",
     "date": "17JUN",
     "destination": "Delhi",
-    "stdEtd": "2305/2335",
-    "status": "Scheduled",
+    "stdEtd": "2305/2341",
+    "status": "Last Call",
     "airline": "Air India Express",
     "sourceDestination": "Delhi",
     "scheduledAt": "2026-06-17T23:05:00+04:00",
-    "estimatedAt": "2026-06-17T23:35:00+04:00",
+    "estimatedAt": "2026-06-17T23:41:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -116,7 +116,7 @@
     "date": "17JUN",
     "destination": "Islamabad",
     "stdEtd": "2300",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Islamabad",
     "scheduledAt": "2026-06-17T23:00:00+04:00",
@@ -124,7 +124,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -132,7 +132,7 @@
     "date": "17JUN",
     "destination": "DOH",
     "stdEtd": "2300",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Qatar Airways",
     "sourceDestination": "Doha",
     "scheduledAt": "2026-06-17T23:00:00+04:00",
@@ -140,7 +140,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -148,7 +148,7 @@
     "date": "17JUN",
     "destination": "Calicut",
     "stdEtd": "2230",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Calicut",
     "scheduledAt": "2026-06-17T22:30:00+04:00",
@@ -156,7 +156,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -164,7 +164,7 @@
     "date": "17JUN",
     "destination": "Hyderabad",
     "stdEtd": "2230",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Hyderabad",
     "scheduledAt": "2026-06-17T22:30:00+04:00",
@@ -172,39 +172,39 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
     "code": "IX712",
     "date": "17JUN",
     "destination": "Kannur",
-    "stdEtd": "2230",
-    "status": "Scheduled",
+    "stdEtd": "2230/2256",
+    "status": "Departed",
     "airline": "Air India Express",
     "sourceDestination": "Kannur",
     "scheduledAt": "2026-06-17T22:30:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-06-17T22:56:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
     "code": "OV497",
     "date": "17JUN",
     "destination": "Dhaka",
-    "stdEtd": "2215",
-    "status": "Gate Open",
+    "stdEtd": "2215/2249",
+    "status": "Departed",
     "airline": "Salam Air",
     "sourceDestination": "Dhaka",
     "scheduledAt": "2026-06-17T22:15:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-06-17T22:49:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -212,7 +212,7 @@
     "date": "17JUN",
     "destination": "Bangkok",
     "stdEtd": "2150",
-    "status": "Boarding",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Bangkok",
     "scheduledAt": "2026-06-17T21:50:00+04:00",
@@ -220,7 +220,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -228,7 +228,7 @@
     "date": "17JUN",
     "destination": "JED",
     "stdEtd": "2145",
-    "status": "Last Call",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Jeddah",
     "scheduledAt": "2026-06-17T21:45:00+04:00",
@@ -236,7 +236,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -244,7 +244,7 @@
     "date": "17JUN",
     "destination": "Cairo",
     "stdEtd": "2135",
-    "status": "Last Call",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Cairo",
     "scheduledAt": "2026-06-17T21:35:00+04:00",
@@ -252,7 +252,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -260,7 +260,7 @@
     "date": "17JUN",
     "destination": "Cairo",
     "stdEtd": "2125",
-    "status": "Gate Closed",
+    "status": "Departed",
     "airline": "Egyptair",
     "sourceDestination": "Cairo",
     "scheduledAt": "2026-06-17T21:25:00+04:00",
@@ -268,23 +268,23 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
     "code": "MU2052",
     "date": "17JUN",
     "destination": "Beijing",
-    "stdEtd": "2115",
-    "status": "Boarding",
+    "stdEtd": "2115/2141",
+    "status": "Departed",
     "airline": "China Eastern",
     "sourceDestination": "Beijing",
     "scheduledAt": "2026-06-17T21:15:00+04:00",
-    "estimatedAt": "",
+    "estimatedAt": "2026-06-17T21:41:00+04:00",
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -300,7 +300,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -316,7 +316,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -332,7 +332,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -348,7 +348,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -364,7 +364,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -380,7 +380,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -396,7 +396,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -412,7 +412,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -428,7 +428,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -444,7 +444,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -460,7 +460,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -476,7 +476,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -492,7 +492,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -508,7 +508,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -524,7 +524,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -540,7 +540,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -556,7 +556,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -572,7 +572,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -588,7 +588,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -604,7 +604,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -620,7 +620,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -636,7 +636,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -652,7 +652,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -668,7 +668,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -684,7 +684,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -700,7 +700,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -716,7 +716,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -732,7 +732,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -748,7 +748,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -764,7 +764,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -780,7 +780,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -796,7 +796,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -812,7 +812,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -828,7 +828,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -844,7 +844,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -860,7 +860,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -876,7 +876,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -892,7 +892,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -908,7 +908,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -924,7 +924,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -940,7 +940,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -956,7 +956,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -972,7 +972,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -988,7 +988,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1004,7 +1004,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1020,7 +1020,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1036,7 +1036,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1052,7 +1052,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1068,7 +1068,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1084,7 +1084,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1100,7 +1100,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1116,7 +1116,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1132,7 +1132,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1148,7 +1148,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1164,7 +1164,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1180,7 +1180,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1196,7 +1196,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1212,7 +1212,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1228,7 +1228,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1244,7 +1244,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1260,7 +1260,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1276,7 +1276,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1292,7 +1292,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1308,7 +1308,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1324,7 +1324,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1340,7 +1340,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1356,7 +1356,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1372,7 +1372,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1388,7 +1388,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1404,7 +1404,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1420,7 +1420,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1436,7 +1436,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1452,7 +1452,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1468,7 +1468,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1484,7 +1484,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1500,7 +1500,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1516,7 +1516,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1532,7 +1532,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1548,7 +1548,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1564,7 +1564,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1580,7 +1580,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1596,7 +1596,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1612,7 +1612,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1628,7 +1628,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
@@ -1644,7 +1644,7 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-17T17:40:03+00:00",
+    "lastUpdated": "2026-06-17T19:49:38+00:00",
     "firstSeen": "2026-06-17T01:43:32+00:00"
   },
   {
