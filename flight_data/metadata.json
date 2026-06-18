@@ -1,9 +1,9 @@
 {
-  "status": "success",
-  "message": "تم التحديث بنجاح",
+  "status": "no_flights_parsed",
+  "message": "لم يتم تحليل أي رحلات - الاحتفاظ بالبيانات الحالية",
   "liveFlightsCount": 0,
   "archiveFlightsCount": 2410,
   "sourceUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
-  "updatedAt": "2026-06-17T23:10:33+00:00",
+  "updatedAt": "2026-06-18T01:45:04+00:00",
   "timezone": "Asia/Muscat"
 }
