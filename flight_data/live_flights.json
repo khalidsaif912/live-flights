@@ -1,197 +1,5 @@
 [
   {
-    "code": "6X6828",
-    "date": "24JUN",
-    "destination": "Shiraz",
-    "stdEtd": "1400/1538",
-    "status": "Departed",
-    "airline": "6X",
-    "sourceDestination": "Shiraz",
-    "scheduledAt": "2026-06-24T14:00:00+04:00",
-    "estimatedAt": "2026-06-24T15:38:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "WY675",
-    "date": "24JUN",
-    "destination": "JED",
-    "stdEtd": "1450",
-    "status": "Departed",
-    "airline": "Oman Air",
-    "sourceDestination": "Jeddah",
-    "scheduledAt": "2026-06-24T14:50:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "WY679",
-    "date": "24JUN",
-    "destination": "Medina",
-    "stdEtd": "1505",
-    "status": "Departed",
-    "airline": "Oman Air",
-    "sourceDestination": "Medina",
-    "scheduledAt": "2026-06-24T15:05:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "WY291",
-    "date": "24JUN",
-    "destination": "Calicut",
-    "stdEtd": "1510",
-    "status": "Departed",
-    "airline": "Oman Air",
-    "sourceDestination": "Calicut",
-    "scheduledAt": "2026-06-24T15:10:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "OV391",
-    "date": "24JUN",
-    "destination": "Port Sudan",
-    "stdEtd": "1520/1556",
-    "status": "Departed",
-    "airline": "Salam Air",
-    "sourceDestination": "Port Sudan",
-    "scheduledAt": "2026-06-24T15:20:00+04:00",
-    "estimatedAt": "2026-06-24T15:56:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "6X7317",
-    "date": "24JUN",
-    "destination": "Tehran",
-    "stdEtd": "1525/1551",
-    "status": "Departed",
-    "airline": "6X",
-    "sourceDestination": "Tehran",
-    "scheduledAt": "2026-06-24T15:25:00+04:00",
-    "estimatedAt": "2026-06-24T15:51:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "6X6811",
-    "date": "24JUN",
-    "destination": "Tehran",
-    "stdEtd": "1345/1628",
-    "status": "Departed",
-    "airline": "6X",
-    "sourceDestination": "Tehran",
-    "scheduledAt": "2026-06-24T13:45:00+04:00",
-    "estimatedAt": "2026-06-24T16:28:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "BG122",
-    "date": "24JUN",
-    "destination": "Dhaka",
-    "stdEtd": "1410/1648",
-    "status": "Departed",
-    "airline": "Biman Bangladesh Airlines",
-    "sourceDestination": "Dhaka",
-    "scheduledAt": "2026-06-24T14:10:00+04:00",
-    "estimatedAt": "2026-06-24T16:48:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "WY907",
-    "date": "24JUN",
-    "destination": "Salalah",
-    "stdEtd": "1600",
-    "status": "Departed",
-    "airline": "Oman Air",
-    "sourceDestination": "Salalah",
-    "scheduledAt": "2026-06-24T16:00:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "OV837",
-    "date": "24JUN",
-    "destination": "Trabzon",
-    "stdEtd": "1620",
-    "status": "Departed",
-    "airline": "Salam Air",
-    "sourceDestination": "Trabzon",
-    "scheduledAt": "2026-06-24T16:20:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "OV213",
-    "date": "24JUN",
-    "destination": "Dammam",
-    "stdEtd": "1630/1646",
-    "status": "Departed",
-    "airline": "Salam Air",
-    "sourceDestination": "Dammam",
-    "scheduledAt": "2026-06-24T16:30:00+04:00",
-    "estimatedAt": "2026-06-24T16:46:00+04:00",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "FZ044",
-    "date": "24JUN",
-    "destination": "DXB",
-    "stdEtd": "1650",
-    "status": "Departed",
-    "airline": "flydubai",
-    "sourceDestination": "Dubai",
-    "scheduledAt": "2026-06-24T16:50:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
     "code": "OV771",
     "date": "24JUN",
     "destination": "Calicut",
@@ -204,8 +12,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV245",
@@ -220,8 +28,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY669",
@@ -236,8 +44,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV855",
@@ -252,8 +60,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY909",
@@ -268,8 +76,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV105",
@@ -284,8 +92,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY681",
@@ -300,15 +108,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY921",
     "date": "24JUN",
     "destination": "Salalah",
     "stdEtd": "1940",
-    "status": "Last Call",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Salalah",
     "scheduledAt": "2026-06-24T19:40:00+04:00",
@@ -316,15 +124,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY695",
     "date": "24JUN",
     "destination": "Dammam",
     "stdEtd": "2000",
-    "status": "Gate Open",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Dammam",
     "scheduledAt": "2026-06-24T20:00:00+04:00",
@@ -332,15 +140,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY661",
     "date": "24JUN",
     "destination": "DOH",
     "stdEtd": "2010",
-    "status": "Gate Open",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Doha",
     "scheduledAt": "2026-06-24T20:10:00+04:00",
@@ -348,15 +156,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY611",
     "date": "24JUN",
     "destination": "DXB",
     "stdEtd": "2015",
-    "status": "Gate Open",
+    "status": "Departed",
     "airline": "Oman Air",
     "sourceDestination": "Dubai",
     "scheduledAt": "2026-06-24T20:15:00+04:00",
@@ -364,15 +172,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "G9119",
     "date": "24JUN",
     "destination": "Sharjah",
     "stdEtd": "2020",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "Air Arabia",
     "sourceDestination": "Sharjah",
     "scheduledAt": "2026-06-24T20:20:00+04:00",
@@ -380,15 +188,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "FZ048",
     "date": "24JUN",
     "destination": "DXB",
     "stdEtd": "2045",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "flydubai",
     "sourceDestination": "Dubai",
     "scheduledAt": "2026-06-24T20:45:00+04:00",
@@ -396,15 +204,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "MU2052",
     "date": "24JUN",
     "destination": "Beijing",
     "stdEtd": "2115",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "China Eastern",
     "sourceDestination": "Beijing",
     "scheduledAt": "2026-06-24T21:15:00+04:00",
@@ -412,15 +220,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "MS931",
     "date": "24JUN",
     "destination": "Cairo",
     "stdEtd": "2125",
-    "status": "Scheduled",
+    "status": "Boarding",
     "airline": "Egyptair",
     "sourceDestination": "Cairo",
     "scheduledAt": "2026-06-24T21:25:00+04:00",
@@ -428,15 +236,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY407",
     "date": "24JUN",
     "destination": "Cairo",
     "stdEtd": "2135",
-    "status": "Scheduled",
+    "status": "Last Call",
     "airline": "Oman Air",
     "sourceDestination": "Cairo",
     "scheduledAt": "2026-06-24T21:35:00+04:00",
@@ -444,8 +252,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY673",
@@ -460,15 +268,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "PK172",
     "date": "24JUN",
     "destination": "Multan",
     "stdEtd": "2145",
-    "status": "Scheduled",
+    "status": "Departed",
     "airline": "PIA Pakistan International Airlines",
     "sourceDestination": "Multan",
     "scheduledAt": "2026-06-24T21:45:00+04:00",
@@ -476,15 +284,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY817",
     "date": "24JUN",
     "destination": "Bangkok",
     "stdEtd": "2150",
-    "status": "Scheduled",
+    "status": "Boarding",
     "airline": "Oman Air",
     "sourceDestination": "Bangkok",
     "scheduledAt": "2026-06-24T21:50:00+04:00",
@@ -492,8 +300,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV497",
@@ -508,15 +316,15 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV773",
     "date": "24JUN",
     "destination": "Calicut",
     "stdEtd": "2230",
-    "status": "Scheduled",
+    "status": "Gate Open",
     "airline": "Salam Air",
     "sourceDestination": "Calicut",
     "scheduledAt": "2026-06-24T22:30:00+04:00",
@@ -524,8 +332,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "IX712",
@@ -540,8 +348,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "QR1125",
@@ -556,8 +364,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV563",
@@ -572,8 +380,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "IX164",
@@ -588,8 +396,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV705",
@@ -604,8 +412,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV783",
@@ -620,8 +428,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "EY697",
@@ -636,8 +444,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY833",
@@ -652,24 +460,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
-  },
-  {
-    "code": "OV505",
-    "date": "24JUN",
-    "destination": "Sialkot",
-    "stdEtd": "2355",
-    "status": "Scheduled",
-    "airline": "Salam Air",
-    "sourceDestination": "Sialkot",
-    "scheduledAt": "2026-06-24T23:55:00+04:00",
-    "estimatedAt": "",
-    "gate": "",
-    "terminal": "",
-    "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "6E1268",
@@ -684,8 +476,24 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "OV505",
+    "date": "24JUN",
+    "destination": "Sialkot",
+    "stdEtd": "2355",
+    "status": "Scheduled",
+    "airline": "Salam Air",
+    "sourceDestination": "Sialkot",
+    "scheduledAt": "2026-06-24T23:55:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "GF567",
@@ -700,8 +508,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "PK230",
@@ -716,8 +524,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "IX236",
@@ -732,8 +540,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV401",
@@ -748,8 +556,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV761",
@@ -764,8 +572,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "TK775",
@@ -780,8 +588,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY685",
@@ -796,8 +604,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY849",
@@ -812,8 +620,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "BS322",
@@ -828,8 +636,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "PVT5020",
@@ -844,8 +652,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY251",
@@ -860,8 +668,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY211",
@@ -876,8 +684,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY671",
@@ -892,8 +700,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY225",
@@ -908,8 +716,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY235",
@@ -924,8 +732,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "6E1274",
@@ -940,8 +748,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "6E1272",
@@ -956,8 +764,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "J25020",
@@ -972,8 +780,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY265",
@@ -988,8 +796,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY297",
@@ -1004,8 +812,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV513",
@@ -1020,8 +828,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY241",
@@ -1036,8 +844,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY281",
@@ -1052,8 +860,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "ET625",
@@ -1068,8 +876,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "PC831",
@@ -1084,8 +892,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "EK867",
@@ -1100,8 +908,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY201",
@@ -1116,8 +924,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "QR1149",
@@ -1132,8 +940,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "3T263",
@@ -1148,8 +956,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV5041",
@@ -1164,8 +972,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY317",
@@ -1180,8 +988,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY223",
@@ -1196,8 +1004,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV283",
@@ -1212,8 +1020,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV133",
@@ -1228,8 +1036,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV101",
@@ -1244,8 +1052,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV811",
@@ -1260,8 +1068,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY815",
@@ -1276,8 +1084,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY603",
@@ -1292,8 +1100,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY903",
@@ -1308,8 +1116,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV241",
@@ -1324,8 +1132,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY823",
@@ -1340,8 +1148,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "FZ046",
@@ -1356,8 +1164,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY843",
@@ -1372,8 +1180,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY705",
@@ -1388,8 +1196,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY253",
@@ -1404,8 +1212,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV271",
@@ -1420,8 +1228,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "G9113",
@@ -1436,8 +1244,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY245",
@@ -1452,8 +1260,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV365",
@@ -1468,8 +1276,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY831",
@@ -1484,8 +1292,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV5093",
@@ -1500,8 +1308,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "6X1128",
@@ -1516,8 +1324,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV337",
@@ -1532,8 +1340,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY905",
@@ -1548,8 +1356,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY413",
@@ -1564,8 +1372,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV103",
@@ -1580,8 +1388,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "FZ042",
@@ -1596,8 +1404,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY117",
@@ -1612,8 +1420,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV5043",
@@ -1628,8 +1436,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "OV285",
@@ -1644,8 +1452,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY101",
@@ -1660,8 +1468,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY153",
@@ -1676,8 +1484,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY169",
@@ -1692,8 +1500,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY683",
@@ -1708,8 +1516,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "PF735",
@@ -1724,8 +1532,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY143",
@@ -1740,8 +1548,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY609",
@@ -1756,8 +1564,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY663",
@@ -1772,8 +1580,8 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   },
   {
     "code": "WY405",
@@ -1788,7 +1596,199 @@
     "gate": "",
     "terminal": "",
     "remarks": "",
-    "lastUpdated": "2026-06-24T15:54:19+00:00",
-    "firstSeen": "2026-06-24T15:54:19+00:00"
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "6X6828",
+    "date": "24JUN",
+    "destination": "Shiraz",
+    "stdEtd": "1400/1538",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Shiraz",
+    "scheduledAt": "2026-06-24T14:00:00+04:00",
+    "estimatedAt": "2026-06-24T15:38:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "WY675",
+    "date": "24JUN",
+    "destination": "JED",
+    "stdEtd": "1450",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Jeddah",
+    "scheduledAt": "2026-06-24T14:50:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "WY679",
+    "date": "24JUN",
+    "destination": "Medina",
+    "stdEtd": "1505",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Medina",
+    "scheduledAt": "2026-06-24T15:05:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "WY291",
+    "date": "24JUN",
+    "destination": "Calicut",
+    "stdEtd": "1510",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Calicut",
+    "scheduledAt": "2026-06-24T15:10:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "OV391",
+    "date": "24JUN",
+    "destination": "Port Sudan",
+    "stdEtd": "1520/1556",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Port Sudan",
+    "scheduledAt": "2026-06-24T15:20:00+04:00",
+    "estimatedAt": "2026-06-24T15:56:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "6X7317",
+    "date": "24JUN",
+    "destination": "Tehran",
+    "stdEtd": "1525/1551",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Tehran",
+    "scheduledAt": "2026-06-24T15:25:00+04:00",
+    "estimatedAt": "2026-06-24T15:51:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "6X6811",
+    "date": "24JUN",
+    "destination": "Tehran",
+    "stdEtd": "1345/1628",
+    "status": "Departed",
+    "airline": "6X",
+    "sourceDestination": "Tehran",
+    "scheduledAt": "2026-06-24T13:45:00+04:00",
+    "estimatedAt": "2026-06-24T16:28:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "BG122",
+    "date": "24JUN",
+    "destination": "Dhaka",
+    "stdEtd": "1410/1648",
+    "status": "Departed",
+    "airline": "Biman Bangladesh Airlines",
+    "sourceDestination": "Dhaka",
+    "scheduledAt": "2026-06-24T14:10:00+04:00",
+    "estimatedAt": "2026-06-24T16:48:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "WY907",
+    "date": "24JUN",
+    "destination": "Salalah",
+    "stdEtd": "1600",
+    "status": "Departed",
+    "airline": "Oman Air",
+    "sourceDestination": "Salalah",
+    "scheduledAt": "2026-06-24T16:00:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "OV837",
+    "date": "24JUN",
+    "destination": "Trabzon",
+    "stdEtd": "1620",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Trabzon",
+    "scheduledAt": "2026-06-24T16:20:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "OV213",
+    "date": "24JUN",
+    "destination": "Dammam",
+    "stdEtd": "1630/1646",
+    "status": "Departed",
+    "airline": "Salam Air",
+    "sourceDestination": "Dammam",
+    "scheduledAt": "2026-06-24T16:30:00+04:00",
+    "estimatedAt": "2026-06-24T16:46:00+04:00",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
+  },
+  {
+    "code": "FZ044",
+    "date": "24JUN",
+    "destination": "DXB",
+    "stdEtd": "1650",
+    "status": "Departed",
+    "airline": "flydubai",
+    "sourceDestination": "Dubai",
+    "scheduledAt": "2026-06-24T16:50:00+04:00",
+    "estimatedAt": "",
+    "gate": "",
+    "terminal": "",
+    "remarks": "",
+    "lastUpdated": "2026-06-24T17:50:56+00:00",
+    "firstSeen": "2026-06-24T17:50:56+00:00"
   }
 ]
