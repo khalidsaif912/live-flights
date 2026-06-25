@@ -2,479 +2,1071 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>لوحة رحلات مطار مسقط</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c4a6e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>✈️ رحلات مطار مسقط</title>
   <style>
     :root {
       color-scheme: light;
-      --bg: #f5f7fb;
+      --bg: #e8f4fc;
+      --bg-deep: #0c4a6e;
       --card: #ffffff;
-      --text: #172033;
-      --muted: #667085;
-      --line: #dde3ee;
-      --brand: #1d4ed8;
-      --brand-soft: #dbeafe;
-      --ok: #166534;
-      --ok-soft: #dcfce7;
-      --warn: #92400e;
-      --warn-soft: #fef3c7;
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --text: #0f172a;
+      --muted: #64748b;
+      --line: #e2e8f0;
+      --brand: #0284c7;
+      --brand-dark: #0369a1;
+      --arrival: #059669;
+      --arrival-soft: #d1fae5;
+      --departure: #2563eb;
+      --departure-soft: #dbeafe;
+      --archive: #7c3aed;
+      --archive-soft: #ede9fe;
+      --ok: #15803d;
+      --warn: #b45309;
+      --danger: #b91c1c;
+      --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --nav-h: 72px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
     body {
       margin: 0;
-      font-family: Tahoma, Arial, sans-serif;
-      background: var(--bg);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg-deep) 0%, #155e75 180px, var(--bg) 280px);
+      color: var(--text);
+      min-height: 100dvh;
+      padding-bottom: calc(var(--nav-h) + var(--safe-bottom) + 16px);
+    }
+
+    .app {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px 14px 0;
+    }
+
+    .header {
+      color: #fff;
+      padding: 8px 4px 20px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      font-size: 36px;
+      line-height: 1;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.2));
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand p {
+      margin: 2px 0 0;
+      font-size: 12px;
+      opacity: 0.85;
+    }
+
+    .refresh-btn {
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.15);
+      color: #fff;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      min-height: 44px;
+    }
+
+    .refresh-btn:active { transform: scale(0.97); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 16px;
+      padding: 12px 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat .label {
+      font-size: 11px;
+      opacity: 0.9;
+      margin-bottom: 4px;
+    }
+
+    .stat .value {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .stat .sub {
+      font-size: 11px;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    .status-bar {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(255,255,255,.18);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,.2);
+    }
+
+    .pill.ok { background: rgba(34,197,94,.25); }
+    .pill.warn { background: rgba(251,191,36,.3); }
+
+    .toolbar {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+      margin-bottom: 14px;
+      position: sticky;
+      top: 8px;
+      z-index: 10;
+    }
+
+    .search-wrap {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .search-wrap span {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 13px 44px 13px 14px;
+      font-size: 15px;
+      background: #f8fafc;
+      min-height: 48px;
+    }
+
+    .search-wrap input:focus {
+      outline: 2px solid var(--brand);
+      border-color: transparent;
+      background: #fff;
+    }
+
+    .filters {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+    }
+
+    .filters::-webkit-scrollbar { display: none; }
+
+    .chip {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      min-height: 36px;
+    }
+
+    .chip.active {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+
+    .flights {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: var(--card);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .flight-row {
+      display: grid;
+      grid-template-columns: 12px 4.8rem 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      gap: 6px 10px;
+      width: 100%;
+      padding: 11px 14px;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      background: var(--card);
+      color: inherit;
+      font: inherit;
+      text-align: right;
+      cursor: pointer;
+      min-height: 50px;
+      animation: fadeIn .2s ease;
+    }
+
+    .flight-row:last-child { border-bottom: none; }
+    .flight-row:active { background: #f8fafc; }
+    .flight-row.expanded { background: #f8fafc; }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      justify-self: center;
+      grid-row: 1;
+      grid-column: 1;
+      flex-shrink: 0;
+    }
+
+    .status-dot.ok { background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,.18); }
+    .status-dot.delayed { background: #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,.16); }
+    .status-dot.boarding { background: #f59e0b; box-shadow: 0 0 0 3px rgba(245,158,11,.18); }
+    .status-dot.active { background: #3b82f6; box-shadow: 0 0 0 3px rgba(59,130,246,.16); }
+    .status-dot.done { background: #14b8a6; box-shadow: 0 0 0 3px rgba(20,184,166,.16); }
+    .status-dot.cancelled { background: #94a3b8; }
+    .status-dot.default { background: #64748b; }
+
+    .flight-row-code {
+      grid-row: 1;
+      grid-column: 2;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
+    }
+
+    .flight-row-dest {
+      grid-row: 1;
+      grid-column: 3;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-width: 0;
+    }
+
+    .flight-row-time {
+      grid-row: 1;
+      grid-column: 4;
+      font-size: 15px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      direction: ltr;
+      white-space: nowrap;
       color: var(--text);
     }
 
-    .wrap {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 24px;
+    .flight-details {
+      display: none;
+      grid-column: 1 / -1;
+      padding: 2px 0 4px 22px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      border-top: 1px dashed var(--line);
+      margin-top: 4px;
+      padding-top: 8px;
     }
 
-    .hero,
-    .panel,
-    .table-wrap {
+    .flight-row.expanded .flight-details { display: block; }
+
+    .dot-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      margin-bottom: 10px;
+      font-size: 10px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .dot-legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .dot-legend .status-dot {
+      width: 8px;
+      height: 8px;
+      box-shadow: none;
+    }
+
+    .flight-card {
+      display: none;
       background: var(--card);
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: var(--shadow);
       border: 1px solid var(--line);
+      animation: fadeIn .25s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .flight-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .flight-code {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .flight-airline {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+      max-width: 48%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .status-badge.scheduled { background: #e0f2fe; color: #0369a1; }
+    .status-badge.boarding { background: #fef3c7; color: #b45309; }
+    .status-badge.departed,
+    .status-badge.landed,
+    .status-badge.arrived { background: var(--arrival-soft); color: var(--arrival); }
+    .status-badge.delayed,
+    .status-badge.late { background: #fee2e2; color: var(--danger); }
+    .status-badge.cancelled { background: #f1f5f9; color: #475569; }
+    .status-badge.default { background: #f1f5f9; color: #334155; }
+
+    .route {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      padding: 12px;
+      background: #f8fafc;
+      border-radius: 14px;
+    }
+
+    .route-icon { font-size: 28px; line-height: 1; }
+
+    .route-city {
+      font-size: 18px;
+      font-weight: 800;
+    }
+
+    .route-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .route-arrow {
+      margin-right: auto;
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .meta-item {
+      text-align: center;
+      padding: 8px 4px;
+      background: #f8fafc;
+      border-radius: 12px;
+    }
+
+    .meta-item .k {
+      font-size: 10px;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .meta-item .v {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .empty, .error-box {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card);
       border-radius: 18px;
       box-shadow: var(--shadow);
-    }
-
-    .hero {
-      padding: 24px;
-      margin-bottom: 18px;
-    }
-
-    .eyebrow {
-      color: var(--brand);
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 30px;
-    }
-
-    .lead {
-      margin: 0;
       color: var(--muted);
       line-height: 1.7;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-      margin: 18px 0;
-    }
+    .error-box { color: var(--danger); }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-    }
-
-    .card .label {
-      color: var(--muted);
-      font-size: 13px;
-      margin-bottom: 8px;
-    }
-
-    .card .value {
-      font-size: 28px;
-      font-weight: 700;
-    }
-
-    .status-row,
-    .toolbar,
-    .tabs {
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: calc(var(--nav-h) + var(--safe-bottom));
+      padding-bottom: var(--safe-bottom);
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--line);
       display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+      z-index: 100;
+      box-shadow: 0 -4px 20px rgba(15,23,42,.06);
+    }
+
+    .nav-btn {
+      flex: 1;
+      border: none;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-    }
-
-    .status-row {
-      margin-top: 16px;
-    }
-
-    .pill,
-    .tab {
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 13px;
+      justify-content: center;
+      gap: 4px;
+      font-size: 11px;
       font-weight: 700;
-      border: 1px solid transparent;
-    }
-
-    .pill {
-      background: #eef2ff;
-      color: #3730a3;
-    }
-
-    .pill.ok {
-      background: var(--ok-soft);
-      color: var(--ok);
-    }
-
-    .pill.warn {
-      background: var(--warn-soft);
-      color: var(--warn);
-    }
-
-    .panel {
-      padding: 18px;
-      margin-bottom: 18px;
-    }
-
-    .tabs {
-      margin-bottom: 14px;
-    }
-
-    .tab {
+      color: var(--muted);
       cursor: pointer;
-      background: #eef2f7;
-      color: #334155;
-      border-color: transparent;
-    }
-
-    .tab.active {
-      background: var(--brand);
-      color: #fff;
-    }
-
-    .toolbar input,
-    .toolbar select {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 12px;
-      padding: 12px 14px;
-      font-size: 14px;
+      padding: 8px 4px;
       min-height: 44px;
     }
 
-    .toolbar input {
-      flex: 1 1 280px;
+    .nav-btn .icon { font-size: 22px; line-height: 1; }
+    .nav-btn.active { color: var(--brand-dark); }
+    .nav-btn.active.arrival { color: var(--arrival); }
+    .nav-btn.active.departure { color: var(--departure); }
+    .nav-btn.active.archive { color: var(--archive); }
+
+    .archive-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
     }
 
-    .toolbar select {
-      flex: 0 0 180px;
+    .archive-tab {
+      flex: 1;
+      border: 1px solid var(--line);
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      min-height: 44px;
+    }
+
+    .archive-tab.active {
+      background: var(--archive-soft);
+      border-color: #c4b5fd;
+      color: var(--archive);
     }
 
     .hint {
-      margin-top: 12px;
+      font-size: 11px;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
-    }
-
-    .table-wrap {
-      overflow: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 920px;
-    }
-
-    th, td {
-      text-align: right;
-      padding: 14px 12px;
-      border-bottom: 1px solid var(--line);
-      font-size: 14px;
-      vertical-align: top;
-    }
-
-    th {
-      background: #f8fafc;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-
-    tr:hover td {
-      background: #fafcff;
-    }
-
-    .empty,
-    .error {
-      padding: 24px;
       text-align: center;
-      color: var(--muted);
+      margin: 16px 0;
+      line-height: 1.6;
+      padding: 0 8px;
     }
 
-    .error {
-      color: #991b1b;
-    }
+    body.embed { padding-bottom: 16px; }
+    body.embed .header .refresh-btn,
+    body.embed .bottom-nav,
+    body.embed .hint { display: none; }
+    body.embed .app { max-width: none; }
 
-    code {
-      background: #eef2f7;
-      padding: 2px 6px;
-      border-radius: 6px;
-      font-family: Consolas, monospace;
+    @media (min-width: 768px) {
+      .app { max-width: 960px; padding: 24px 20px 0; }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+      .dot-legend { display: none; }
+      .flights {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        overflow: visible;
+      }
+      .flight-row { display: none; }
+      .flight-card {
+        display: block;
+      }
+      .brand h1 { font-size: 26px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="hero">
-      <div class="eyebrow">MUSCAT AIRPORT FLIGHTS</div>
-      <h1>لوحة عرض النتائج</h1>
-      <p class="lead">
-        صفحة بسيطة تعرض ناتج تشغيل <code>flight_manager.py</code> من ملفات <code>flight_data</code>.
-      </p>
+  <div class="app">
+    <header class="header">
+      <div class="header-top">
+        <div class="brand">
+          <div class="brand-icon">🛫</div>
+          <div>
+            <h1>مطار مسقط الدولي</h1>
+            <p>Muscat International Airport · MCT</p>
+          </div>
+        </div>
+        <button class="refresh-btn" id="refreshBtn" type="button">🔄 تحديث</button>
+      </div>
 
-      <div class="grid">
-        <div class="card">
-          <div class="label">حالة التحديث</div>
-          <div class="value" id="statusValue">...</div>
+      <div class="stats">
+        <div class="stat">
+          <div class="label">🛬 وصول اليوم</div>
+          <div class="value" id="arrivalsCount">0</div>
         </div>
-        <div class="card">
-          <div class="label">رحلات اليوم</div>
-          <div class="value" id="liveCount">0</div>
+        <div class="stat">
+          <div class="label">🛫 مغادرة اليوم</div>
+          <div class="value" id="departuresCount">0</div>
         </div>
-        <div class="card">
-          <div class="label">إجمالي الأرشيف</div>
+        <div class="stat">
+          <div class="label">🗂️ الأرشيف</div>
           <div class="value" id="archiveCount">0</div>
+          <div class="sub" id="archiveBreakdown">🛬 0 · 🛫 0</div>
         </div>
-        <div class="card">
-          <div class="label">آخر تحديث</div>
-          <div class="value" id="updatedAt" style="font-size:18px">-</div>
+        <div class="stat">
+          <div class="label">🕐 آخر تحديث</div>
+          <div class="value" id="updatedAt" style="font-size:14px">-</div>
         </div>
       </div>
 
-      <div class="status-row">
-        <span id="statusPill" class="pill">Loading...</span>
-        <span class="pill">المصدر: <span id="sourceUrl">-</span></span>
-        <span class="pill">المنطقة الزمنية: <span id="timezone">-</span></span>
+      <div class="status-bar">
+        <span id="statusPill" class="pill">⏳ جاري التحميل...</span>
+        <span class="pill">🌍 Asia/Muscat</span>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="search-wrap">
+        <span>🔍</span>
+        <input id="searchInput" type="search" placeholder="ابحث برقم الرحلة، المدينة، الناقل..." autocomplete="off">
+      </div>
+      <div class="filters" id="statusFilters">
+        <button class="chip active" data-status="">✨ الكل</button>
+      </div>
+      <div class="dot-legend" aria-hidden="true">
+        <span><i class="status-dot ok"></i>في الموعد</span>
+        <span><i class="status-dot delayed"></i>تأخير</span>
+        <span><i class="status-dot boarding"></i>صعود</span>
+        <span><i class="status-dot active"></i>بالجو</span>
+        <span><i class="status-dot done"></i>وصلت</span>
       </div>
     </section>
 
-    <section class="panel">
-      <div class="tabs">
-        <button class="tab active" data-mode="live">رحلات اليوم</button>
-        <button class="tab" data-mode="archive">الأرشيف الكامل</button>
-      </div>
+    <div class="archive-tabs" id="archiveTabs" hidden>
+      <button class="archive-tab active" data-archive-filter="all">📋 الكل</button>
+      <button class="archive-tab" data-archive-filter="arrival">🛬 وصول</button>
+      <button class="archive-tab" data-archive-filter="departure">🛫 مغادرة</button>
+    </div>
 
-      <div class="toolbar">
-        <input id="searchInput" type="search" placeholder="ابحث برقم الرحلة أو الوجهة أو شركة الطيران أو الحالة">
-        <select id="statusFilter">
-          <option value="">كل الحالات</option>
-        </select>
-      </div>
+    <div class="flights" id="flightsList">
+      <div class="empty">⏳ جاري تحميل الرحلات...</div>
+    </div>
 
-      <div class="hint" id="hintText">
-        إذا فتحت الصفحة مباشرة من المتصفح بصيغة <code>file://</code> فقد يمنع المتصفح قراءة ملفات JSON.
-        شغّل خادمًا محليًا مثل: <code>python -m http.server 8000</code> ثم افتح <code>http://localhost:8000</code>.
-      </div>
-    </section>
+    <div class="error-box" id="fileProtocolWarning" hidden>
+      <strong>⚠️ لا يمكن التشغيل بفتح الملف مباشرة</strong><br><br>
+      المتصفح يمنع قراءة بيانات JSON من <code>file://</code>.<br><br>
+      <strong>الحل السريع (Windows):</strong><br>
+      انقر مرتين على <code>start-local.bat</code> داخل مجلد المشروع<br><br>
+      <strong>أو من الطرفية:</strong><br>
+      <code>cd C:\Users\PC\Documents\GitHub\live-flights</code><br>
+      <code>python -m http.server 8765</code><br>
+      ثم افتح <a href="http://localhost:8765/">http://localhost:8765/</a>
+    </div>
 
-    <section class="table-wrap">
-      <table>
-        <thead>
-          <tr>
-            <th>رقم الرحلة</th>
-            <th>التاريخ</th>
-            <th>الوجهة</th>
-            <th>الناقل</th>
-            <th>الوقت</th>
-            <th>الحالة</th>
-            <th>البوابة</th>
-            <th>المبنى</th>
-            <th>آخر تحديث</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-          <tr><td colspan="9" class="empty">جاري تحميل البيانات...</td></tr>
-        </tbody>
-      </table>
-    </section>
+    <p class="hint" id="hintText">
+      💡 للتشغيل المحلي: انقر مرتين على <code>start-local.bat</code> أو نفّذ
+      <code>powershell -File start-local.ps1</code>
+    </p>
   </div>
+
+  <nav class="bottom-nav" id="bottomNav">
+    <button class="nav-btn arrival active" data-mode="arrivals" type="button">
+      <span class="icon">🛬</span>
+      <span>الوصول</span>
+    </button>
+    <button class="nav-btn departure" data-mode="departures" type="button">
+      <span class="icon">🛫</span>
+      <span>المغادرة</span>
+    </button>
+    <button class="nav-btn archive" data-mode="archive" type="button">
+      <span class="icon">🗂️</span>
+      <span>الأرشيف</span>
+    </button>
+  </nav>
 
   <script>
     const state = {
       meta: {},
       live: [],
       archive: [],
-      mode: "live",
+      mode: "arrivals",
+      archiveFilter: "all",
+      statusFilter: "",
     };
 
-    const statusValue = document.getElementById("statusValue");
-    const liveCount = document.getElementById("liveCount");
-    const archiveCount = document.getElementById("archiveCount");
-    const updatedAt = document.getElementById("updatedAt");
-    const statusPill = document.getElementById("statusPill");
-    const sourceUrl = document.getElementById("sourceUrl");
-    const timezone = document.getElementById("timezone");
-    const tableBody = document.getElementById("tableBody");
-    const searchInput = document.getElementById("searchInput");
-    const statusFilter = document.getElementById("statusFilter");
-    const tabs = [...document.querySelectorAll(".tab")];
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("embed") === "1") document.body.classList.add("embed");
+
+    const IS_FILE_PROTOCOL = window.location.protocol === "file:";
+    const DATA_BASE = new URL("flight_data/", window.location.href);
+
+    function dataUrl(file) {
+      return new URL(file, DATA_BASE).href;
+    }
+
+    const STATUS_EMOJI = {
+      scheduled: "📅",
+      boarding: "🚪",
+      departed: "✈️",
+      landed: "🛬",
+      arrived: "✅",
+      delayed: "⏳",
+      late: "⏳",
+      cancelled: "❌",
+      canceled: "❌",
+      "on time": "✅",
+      "final call": "📢",
+      "gate closed": "🔒",
+      "check-in": "🎫",
+    };
+
+    const els = {
+      arrivalsCount: document.getElementById("arrivalsCount"),
+      departuresCount: document.getElementById("departuresCount"),
+      archiveCount: document.getElementById("archiveCount"),
+      archiveBreakdown: document.getElementById("archiveBreakdown"),
+      updatedAt: document.getElementById("updatedAt"),
+      statusPill: document.getElementById("statusPill"),
+      flightsList: document.getElementById("flightsList"),
+      searchInput: document.getElementById("searchInput"),
+      statusFilters: document.getElementById("statusFilters"),
+      archiveTabs: document.getElementById("archiveTabs"),
+      refreshBtn: document.getElementById("refreshBtn"),
+      navBtns: [...document.querySelectorAll(".nav-btn")],
+      archiveTabBtns: [...document.querySelectorAll(".archive-tab")],
+      fileProtocolWarning: document.getElementById("fileProtocolWarning"),
+    };
 
     function escapeHtml(value) {
       return String(value ?? "").replace(/[&<>"']/g, (c) => ({
-        "&": "&amp;",
-        "<": "&lt;",
-        ">": "&gt;",
-        "\"": "&quot;",
-        "'": "&#039;",
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;",
       }[c]));
+    }
+
+    function flightDirection(row) {
+      return (row.direction || "departure").toLowerCase();
+    }
+
+    function isHiddenStatus(status) {
+      const key = String(status || "").toLowerCase();
+      return [
+        "bags on belt",
+        "bags delivered",
+        "gate closed",
+        "gate open",
+        "last call",
+        "final call",
+        "on time",
+      ].some((phrase) => key.includes(phrase));
+    }
+
+    function visibleFlights(rows) {
+      return rows.filter((row) => !isHiddenStatus(row.status));
     }
 
     function formatDate(value) {
       if (!value) return "-";
       const d = new Date(value);
-      return Number.isNaN(d.getTime()) ? value : d.toLocaleString("ar");
+      if (Number.isNaN(d.getTime())) return value;
+      return d.toLocaleString("ar-OM", {
+        day: "numeric", month: "short", hour: "2-digit", minute: "2-digit",
+      });
     }
 
-    function currentRows() {
-      return state.mode === "live" ? state.live : state.archive;
+    function statusEmoji(status) {
+      const key = String(status || "").toLowerCase().trim();
+      for (const [word, emoji] of Object.entries(STATUS_EMOJI)) {
+        if (key.includes(word)) return emoji;
+      }
+      return "ℹ️";
     }
 
-    function currentFilteredRows() {
-      const q = searchInput.value.trim().toLowerCase();
-      const selectedStatus = statusFilter.value;
+    function statusClass(status) {
+      const key = String(status || "").toLowerCase();
+      if (isHiddenStatus(status)) return "departed";
+      if (key.includes("board")) return "boarding";
+      if (key.includes("depart") || key.includes("land") || key.includes("arriv")) return "departed";
+      if (key.includes("delay") || key.includes("late")) return "delayed";
+      if (key.includes("cancel")) return "cancelled";
+      if (key.includes("sched") || key.includes("expect")) return "scheduled";
+      return "default";
+    }
 
-      return currentRows().filter((row) => {
+    function statusDotClass(status) {
+      const key = String(status || "").toLowerCase();
+      if (key.includes("delay") || key.includes("late")) return "delayed";
+      if (key.includes("cancel")) return "cancelled";
+      if (key.includes("board")) return "boarding";
+      if (key.includes("depart") || key.includes("airborne")) return "active";
+      if (key.includes("land") || key.includes("arriv")) return "done";
+      if (key.includes("sched") || key.includes("expect") || key.includes("on time")) return "ok";
+      return "default";
+    }
+
+    function formatFlightTime(stdEtd) {
+      const s = String(stdEtd || "").trim();
+      if (!s || s === "-") return "—";
+      const parts = s.split("/").map((p) => p.trim()).filter(Boolean);
+      const raw = parts.length > 1 && parts[0] !== parts[1] ? parts[1] : parts[0];
+      if (/^\d{4}$/.test(raw)) return `${raw.slice(0, 2)}:${raw.slice(2)}`;
+      if (/^\d{1,2}:\d{2}$/.test(raw)) return raw;
+      return s;
+    }
+
+    function flightKey(row) {
+      return [
+        flightDirection(row),
+        row.code || "",
+        row.date || "",
+        row.scheduledAt || "",
+        row.stdEtd || "",
+      ].join("|");
+    }
+
+    function renderFlightDetails(row) {
+      const isArrival = flightDirection(row) === "arrival";
+      const parts = [
+        row.airline ? `🏢 ${escapeHtml(row.airline)}` : "",
+        row.status ? `${statusEmoji(row.status)} ${escapeHtml(row.status)}` : "",
+        row.sourceDestination ? `📍 ${escapeHtml(row.sourceDestination)}` : "",
+        row.gate ? `🚪 ${escapeHtml(row.gate)}` : "",
+        row.terminal ? `🏛️ ${escapeHtml(row.terminal)}` : "",
+        row.date ? `📅 ${escapeHtml(row.date)}` : "",
+        isArrival ? "🛬 وصول إلى مسقط" : "🛫 مغادرة من مسقط",
+      ].filter(Boolean);
+      return parts.join(" · ");
+    }
+
+    function countLive(direction) {
+      return visibleFlights(state.live).filter((f) => flightDirection(f) === direction).length;
+    }
+
+    function countArchive(direction) {
+      return visibleFlights(state.archive).filter((f) => flightDirection(f) === direction).length;
+    }
+
+    function baseRows() {
+      if (state.mode === "archive") {
+        let rows = visibleFlights(state.archive);
+        if (state.archiveFilter === "arrival") rows = rows.filter((f) => flightDirection(f) === "arrival");
+        if (state.archiveFilter === "departure") rows = rows.filter((f) => flightDirection(f) === "departure");
+        return rows;
+      }
+      const dir = state.mode === "arrivals" ? "arrival" : "departure";
+      return visibleFlights(state.live).filter((f) => flightDirection(f) === dir);
+    }
+
+    function filteredRows() {
+      const q = els.searchInput.value.trim().toLowerCase();
+      const status = state.statusFilter;
+
+      return baseRows().filter((row) => {
         const haystack = [
-          row.code,
-          row.date,
-          row.destination,
-          row.sourceDestination,
-          row.airline,
-          row.status,
-          row.stdEtd,
-          row.gate,
-          row.terminal,
+          row.code, row.date, row.destination, row.sourceDestination,
+          row.airline, row.status, row.stdEtd, row.gate, row.terminal,
         ].join(" ").toLowerCase();
-
         const matchesText = !q || haystack.includes(q);
-        const matchesStatus = !selectedStatus || (row.status || "") === selectedStatus;
+        const matchesStatus = !status || (row.status || "") === status;
         return matchesText && matchesStatus;
       });
     }
 
-    function populateStatusFilter() {
-      const currentValue = statusFilter.value;
-      const statuses = [...new Set(currentRows().map((f) => f.status).filter(Boolean))].sort();
-      statusFilter.innerHTML = '<option value="">كل الحالات</option>';
-      for (const status of statuses) {
-        const option = document.createElement("option");
-        option.value = status;
-        option.textContent = status;
-        statusFilter.appendChild(option);
-      }
-      statusFilter.value = statuses.includes(currentValue) ? currentValue : "";
+    function populateStatusChips() {
+      const current = state.statusFilter;
+      const statuses = [...new Set(
+        baseRows().map((f) => f.status).filter((s) => s && !isHiddenStatus(s))
+      )].sort();
+      const html = [
+        `<button class="chip${!current ? " active" : ""}" data-status="">✨ الكل</button>`,
+        ...statuses.map((s) => {
+          const active = current === s ? " active" : "";
+          return `<button class="chip${active}" data-status="${escapeHtml(s)}">${statusEmoji(s)} ${escapeHtml(s)}</button>`;
+        }),
+      ].join("");
+      els.statusFilters.innerHTML = html;
+      els.statusFilters.querySelectorAll(".chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          state.statusFilter = chip.dataset.status || "";
+          populateStatusChips();
+          renderFlights();
+        });
+      });
     }
 
-    function renderTable() {
-      const rows = currentFilteredRows();
+    function renderFlights() {
+      const rows = filteredRows();
 
       if (!rows.length) {
-        const emptyText = currentRows().length
-          ? "لا توجد نتائج مطابقة للبحث أو التصفية."
-          : state.mode === "live"
-            ? "لا توجد رحلات ليوم اليوم في ملف live_flights.json الآن."
-            : "ملف الأرشيف فارغ.";
-        tableBody.innerHTML = `<tr><td colspan="9" class="empty">${emptyText}</td></tr>`;
+        const hasBase = baseRows().length > 0;
+        const msg = hasBase
+          ? "🔎 لا توجد نتائج مطابقة للبحث"
+          : state.mode === "archive"
+            ? "📭 الأرشيف فارغ حالياً"
+            : state.mode === "arrivals"
+              ? "🛬 لا توجد رحلات وصول اليوم"
+              : "🛫 لا توجد رحلات مغادرة اليوم";
+        els.flightsList.innerHTML = `<div class="empty">${msg}</div>`;
         return;
       }
 
-      tableBody.innerHTML = rows.map((row) => `
-        <tr>
-          <td><strong>${escapeHtml(row.code || "-")}</strong></td>
-          <td>${escapeHtml(row.date || "-")}</td>
-          <td>
-            <div>${escapeHtml(row.destination || "-")}</div>
-            <div style="color:#667085;font-size:12px">${escapeHtml(row.sourceDestination || "")}</div>
-          </td>
-          <td>${escapeHtml(row.airline || "-")}</td>
-          <td>${escapeHtml(row.stdEtd || "-")}</td>
-          <td>${escapeHtml(row.status || "-")}</td>
-          <td>${escapeHtml(row.gate || "-")}</td>
-          <td>${escapeHtml(row.terminal || "-")}</td>
-          <td>${escapeHtml(formatDate(row.lastUpdated || row.firstSeen || ""))}</td>
-        </tr>
-      `).join("");
+      els.flightsList.innerHTML = rows.map((row) => {
+        const dir = flightDirection(row);
+        const isArrival = dir === "arrival";
+        const routeLabel = isArrival ? "من" : "إلى";
+        const routeEmoji = isArrival ? "🌍" : "🎯";
+        const hubEmoji = isArrival ? "🛬 مسقط" : "🛫 مسقط";
+        const dirEmoji = isArrival ? "🛬" : "🛫";
+        const st = row.status || "-";
+        const stClass = statusClass(st);
+        const stEmoji = statusEmoji(st);
+        const dotClass = statusDotClass(st);
+        const key = flightKey(row);
+        const dest = row.destination || "-";
+        const time = formatFlightTime(row.stdEtd);
+
+        return `
+          <button type="button" class="flight-row" data-key="${escapeHtml(key)}" aria-expanded="false">
+            <span class="status-dot ${dotClass}" title="${escapeHtml(st)}"></span>
+            <span class="flight-row-code">${escapeHtml(row.code || "-")}</span>
+            <span class="flight-row-dest">${escapeHtml(dest)}</span>
+            <span class="flight-row-time">${escapeHtml(time)}</span>
+            <div class="flight-details">${renderFlightDetails(row)}</div>
+          </button>
+          <article class="flight-card">
+            <div class="flight-head">
+              <div>
+                <div class="flight-code">${dirEmoji} ${escapeHtml(row.code || "-")}</div>
+                <div class="flight-airline">🏢 ${escapeHtml(row.airline || "-")}</div>
+              </div>
+              <span class="status-badge ${stClass}">${stEmoji} ${escapeHtml(st)}</span>
+            </div>
+            <div class="route">
+              <span class="route-icon">${routeEmoji}</span>
+              <div>
+                <div class="route-city">${escapeHtml(dest)}</div>
+                <div class="route-sub">${escapeHtml(row.sourceDestination || "")}</div>
+              </div>
+              <span class="route-arrow">${routeLabel} ${hubEmoji}</span>
+            </div>
+            <div class="meta-grid">
+              <div class="meta-item">
+                <div class="k">📅 التاريخ</div>
+                <div class="v">${escapeHtml(row.date || "-")}</div>
+              </div>
+              <div class="meta-item">
+                <div class="k">🕐 الوقت</div>
+                <div class="v">${escapeHtml(row.stdEtd || "-")}</div>
+              </div>
+              <div class="meta-item">
+                <div class="k">🚪 البوابة</div>
+                <div class="v">${escapeHtml(row.gate || "-")}</div>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
     }
 
     function renderMeta() {
       const meta = state.meta || {};
+      const liveArr = meta.liveArrivalsCount ?? countLive("arrival");
+      const liveDep = meta.liveDeparturesCount ?? countLive("departure");
+      const archArr = meta.archiveArrivalsCount ?? countArchive("arrival");
+      const archDep = meta.archiveDeparturesCount ?? countArchive("departure");
+      const archTotal = meta.archiveFlightsCount ?? state.archive.length;
+
+      els.arrivalsCount.textContent = liveArr;
+      els.departuresCount.textContent = liveDep;
+      els.archiveCount.textContent = archTotal;
+      els.archiveBreakdown.textContent = `🛬 ${archArr} · 🛫 ${archDep}`;
+      els.updatedAt.textContent = formatDate(meta.updatedAt);
+
       const status = meta.status || "unknown";
-
-      statusValue.textContent = status;
-      liveCount.textContent = meta.liveFlightsCount ?? state.live.length ?? 0;
-      archiveCount.textContent = meta.archiveFlightsCount ?? state.archive.length ?? 0;
-      updatedAt.textContent = formatDate(meta.updatedAt);
-      sourceUrl.textContent = meta.sourceUrl || "-";
-      timezone.textContent = meta.timezone || "-";
-
-      statusPill.textContent = meta.message || status;
-      statusPill.className = "pill";
-      if (status === "success" || status === "live") {
-        statusPill.classList.add("ok");
-      } else {
-        statusPill.classList.add("warn");
-      }
+      const ok = status === "success" || status === "live";
+      els.statusPill.className = `pill ${ok ? "ok" : "warn"}`;
+      els.statusPill.textContent = `${ok ? "✅" : "⚠️"} ${meta.message || status}`;
     }
 
     function setMode(mode) {
       state.mode = mode;
-      tabs.forEach((tab) => tab.classList.toggle("active", tab.dataset.mode === mode));
-      populateStatusFilter();
-      renderTable();
+      state.statusFilter = "";
+      els.navBtns.forEach((btn) => btn.classList.toggle("active", btn.dataset.mode === mode));
+      els.archiveTabs.hidden = mode !== "archive";
+      populateStatusChips();
+      renderFlights();
     }
 
-    async function fetchJson(path, fallback) {
-      const response = await fetch(`${path}?v=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status} for ${path}`);
-      }
-      const data = await response.json();
-      return data ?? fallback;
+    function setArchiveFilter(filter) {
+      state.archiveFilter = filter;
+      state.statusFilter = "";
+      els.archiveTabBtns.forEach((btn) => btn.classList.toggle("active", btn.dataset.archiveFilter === filter));
+      populateStatusChips();
+      renderFlights();
+    }
+
+    async function fetchJson(file, fallback) {
+      const response = await fetch(`${dataUrl(file)}?v=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status} — ${file}`);
+      return (await response.json()) ?? fallback;
+    }
+
+    function showFileProtocolHelp() {
+      els.flightsList.innerHTML = "";
+      els.fileProtocolWarning.hidden = false;
+      els.statusPill.className = "pill warn";
+      els.statusPill.textContent = "⚠️ استخدم خادمًا محليًا";
+      els.arrivalsCount.textContent = "—";
+      els.departuresCount.textContent = "—";
+      els.archiveCount.textContent = "—";
+      els.archiveBreakdown.textContent = "—";
+      els.updatedAt.textContent = "—";
     }
 
     async function loadData() {
+      if (IS_FILE_PROTOCOL) {
+        showFileProtocolHelp();
+        return;
+      }
+
+      els.fileProtocolWarning.hidden = true;
+      els.refreshBtn.disabled = true;
+      els.refreshBtn.textContent = "⏳ ...";
       try {
         const [meta, live, archive] = await Promise.all([
-          fetchJson("./flight_data/metadata.json", {}),
-          fetchJson("./flight_data/live_flights.json", []),
-          fetchJson("./flight_data/archive_flights.json", []),
+          fetchJson("metadata.json", {}),
+          fetchJson("live_flights.json", []),
+          fetchJson("archive_flights.json", []),
         ]);
-
         state.meta = meta || {};
         state.live = Array.isArray(live) ? live : [];
         state.archive = Array.isArray(archive) ? archive : [];
-
         renderMeta();
-        setMode("live");
+        populateStatusChips();
+        renderFlights();
       } catch (error) {
-        tableBody.innerHTML = `
-          <tr>
-            <td colspan="9" class="error">
-              تعذر قراءة ملفات JSON. افتح الصفحة عبر خادم محلي أو تأكد من وجود ملفات <code>flight_data</code>.
-            </td>
-          </tr>
-        `;
-        statusValue.textContent = "error";
-        statusPill.textContent = error.message;
-        statusPill.className = "pill warn";
+        const hint = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
+          ? "<br><small>تأكد أنك شغّلت الخادم من مجلد <code>live-flights</code> وليس من مجلد آخر.</small>"
+          : "";
+        els.flightsList.innerHTML = `
+          <div class="error-box">
+            ❌ تعذر قراءة البيانات<br>
+            <small>${escapeHtml(error.message)}</small>
+            ${hint}
+          </div>`;
+        els.statusPill.className = "pill warn";
+        els.statusPill.textContent = "⚠️ خطأ في التحميل";
+      } finally {
+        els.refreshBtn.disabled = false;
+        els.refreshBtn.textContent = "🔄 تحديث";
       }
     }
 
-    searchInput.addEventListener("input", renderTable);
-    statusFilter.addEventListener("change", renderTable);
-    tabs.forEach((tab) => tab.addEventListener("click", () => setMode(tab.dataset.mode)));
+    els.searchInput.addEventListener("input", renderFlights);
+    els.refreshBtn.addEventListener("click", loadData);
+    els.navBtns.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
+    els.archiveTabBtns.forEach((btn) => btn.addEventListener("click", () => setArchiveFilter(btn.dataset.archiveFilter)));
+    els.flightsList.addEventListener("click", (event) => {
+      const row = event.target.closest(".flight-row");
+      if (!row) return;
+      const willExpand = !row.classList.contains("expanded");
+      els.flightsList.querySelectorAll(".flight-row.expanded").forEach((openRow) => {
+        if (openRow !== row) {
+          openRow.classList.remove("expanded");
+          openRow.setAttribute("aria-expanded", "false");
+        }
+      });
+      row.classList.toggle("expanded", willExpand);
+      row.setAttribute("aria-expanded", willExpand ? "true" : "false");
+    });
 
     loadData();
+    setInterval(loadData, 5 * 60 * 1000);
   </script>
 </body>
 </html>

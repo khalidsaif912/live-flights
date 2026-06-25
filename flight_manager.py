@@ -3,7 +3,7 @@
 نظام إدارة رحلات مطار مسقط الدولي - MCT
 =====================================
 
-يجمع ويدير الرحلات المغادرة من مسقط بنظام ذكي:
+يجمع ويدير رحلات الوصول والمغادرة من مطار مسقط بنظام ذكي:
 - ملف مباشر: الرحلات خلال 24 ساعة القادمة
 - أرشيف دائم: جميع الرحلات التاريخية بدون تكرار
 - تحديث ذكي: يحدث البيانات المتغيرة فقط
@@ -52,7 +52,9 @@ logging.basicConfig(
 # ══════════════════════════════════════════════════════════════════════════════
 
 BASE_URL = "https://www.muscatairport.co.om"
-SOURCE_URL = "https://www.muscatairport.co.om/flightstatusframe?type=2"
+ARRIVAL_URL = "https://www.muscatairport.co.om/flightstatusframe?type=1"
+DEPARTURE_URL = "https://www.muscatairport.co.om/flightstatusframe?type=2"
+SOURCE_URL = DEPARTURE_URL  # للتوافق مع الإصدارات السابقة
 
 # مسارات الملفات
 OUTPUT_DIR = Path("flight_data")
@@ -96,6 +98,7 @@ class Flight:
     remarks: str = ""            # ملاحظات
     lastUpdated: str = ""        # آخر تحديث
     firstSeen: str = ""          # أول ظهور
+    direction: str = "departure" # arrival | departure
 
 # ══════════════════════════════════════════════════════════════════════════════
 # دوال مساعدة
@@ -216,7 +219,9 @@ def flight_identity(flight: dict[str, Any]) -> str:
     المفتاح = رقم الرحلة + التاريخ + الوجهة + الوقت المجدول
     """
     scheduled = normalize_space(flight.get("scheduledAt", ""))
+    direction = normalize_space(flight.get("direction", "departure")).lower() or "departure"
     return "|".join([
+        direction,
         normalize_flight_code(str(flight.get("code", ""))),
         normalize_date_key(str(flight.get("date", ""))),
         normalize_space(flight.get("destination", "")).upper(),
@@ -296,7 +301,7 @@ def request_live_html(url: str) -> str:
 # تحليل البيانات
 # ══════════════════════════════════════════════════════════════════════════════
 
-def parse_table_flights(html: str) -> list[Flight]:
+def parse_table_flights(html: str, direction: str = "departure") -> list[Flight]:
     """
     تحليل جدول الرحلات من HTML
     الأعمدة: airline, destination, flight code, scheduled, estimated, social, status
@@ -356,6 +361,7 @@ def parse_table_flights(html: str) -> list[Flight]:
             estimatedAt=iso_or_empty(estimated_dt),
             lastUpdated=now_iso(),
             firstSeen=now_iso(),
+            direction=direction,
         ))
     
     return dedupe_flights(flights)
@@ -365,15 +371,30 @@ def dedupe_flights(flights: list[Flight]) -> list[Flight]:
     seen: set[tuple] = set()
     out: list[Flight] = []
     for f in flights:
-        key = (f.code, f.date, f.destination, f.stdEtd)
+        key = (f.direction, f.code, f.date, f.destination, f.stdEtd)
         if key not in seen:
             seen.add(key)
             out.append(f)
     return out
 
-def parse_flights(html: str) -> list[Flight]:
+def parse_flights(html: str, direction: str = "departure") -> list[Flight]:
     """تحليل الرحلات من HTML"""
-    return parse_table_flights(html)
+    return parse_table_flights(html, direction=direction)
+
+
+def fetch_all_flights() -> list[Flight]:
+    """جلب رحلات الوصول والمغادرة ودمجها"""
+    all_flights: list[Flight] = []
+    for url, direction, label in (
+        (ARRIVAL_URL, "arrival", "الوصول"),
+        (DEPARTURE_URL, "departure", "المغادرة"),
+    ):
+        logger.info(f"📡 جلب رحلات {label}: {url}")
+        html = request_live_html(url)
+        parsed = parse_flights(html, direction=direction)
+        logger.info(f"   ✅ {len(parsed)} رحلة {label}")
+        all_flights.extend(parsed)
+    return dedupe_flights(all_flights)
 
 # ══════════════════════════════════════════════════════════════════════════════
 # فلترة وتصنيف الرحلات
@@ -413,6 +434,25 @@ def filter_today_flights(flights: list[Flight], now: datetime | None = None) -> 
             out.append(flight)
 
     return out
+
+
+def is_hidden_status(status: str) -> bool:
+    """حالات لا نعرضها في اللوحة (حقائب، بوابة، نداء أخير، في الموعد...)"""
+    key = normalize_space(status).lower()
+    hidden_phrases = (
+        "bags on belt",
+        "bags delivered",
+        "gate closed",
+        "gate open",
+        "last call",
+        "final call",
+        "on time",
+    )
+    return any(phrase in key for phrase in hidden_phrases)
+
+
+def without_hidden_flights(flights: list[Flight]) -> list[Flight]:
+    return [f for f in flights if not is_hidden_status(f.status)]
 
 # ══════════════════════════════════════════════════════════════════════════════
 # دمج وتحديث الأرشيف
@@ -484,17 +524,44 @@ def read_json_list(path: Path) -> list[dict[str, Any]]:
     except Exception:
         return []
 
-def write_meta(status: str, message: str, live_count: int, archive_count: int) -> None:
+def write_meta(
+    status: str,
+    message: str,
+    live_count: int,
+    archive_count: int,
+    *,
+    live_arrivals: int = 0,
+    live_departures: int = 0,
+    archive_arrivals: int = 0,
+    archive_departures: int = 0,
+) -> None:
     """حفظ معلومات التحديث"""
     write_json(META_JSON, {
         "status": status,
         "message": message,
         "liveFlightsCount": live_count,
         "archiveFlightsCount": archive_count,
-        "sourceUrl": SOURCE_URL,
+        "liveArrivalsCount": live_arrivals,
+        "liveDeparturesCount": live_departures,
+        "archiveArrivalsCount": archive_arrivals,
+        "archiveDeparturesCount": archive_departures,
+        "sourceUrl": DEPARTURE_URL,
+        "arrivalUrl": ARRIVAL_URL,
+        "departureUrl": DEPARTURE_URL,
         "updatedAt": now_iso(),
         "timezone": str(LOCAL_TZ),
     })
+
+
+def count_by_direction(flights: Iterable[dict[str, Any]]) -> tuple[int, int]:
+    arrivals = departures = 0
+    for flight in flights:
+        direction = normalize_space(flight.get("direction", "departure")).lower()
+        if direction == "arrival":
+            arrivals += 1
+        else:
+            departures += 1
+    return arrivals, departures
 
 # ══════════════════════════════════════════════════════════════════════════════
 # تصدير إلى Excel
@@ -573,11 +640,11 @@ def main() -> int:
     """تشغيل النظام الكامل"""
     try:
         logger.info("🚀 بدء نظام إدارة رحلات مطار مسقط")
-        logger.info(f"📍 المصدر: {SOURCE_URL}")
+        logger.info(f"📍 الوصول: {ARRIVAL_URL}")
+        logger.info(f"📍 المغادرة: {DEPARTURE_URL}")
         
         # جلب البيانات
-        html = request_live_html(SOURCE_URL)
-        flights = parse_flights(html)
+        flights = fetch_all_flights()
         
         if not flights:
             logger.warning("⚠️  لم يتم العثور على رحلات - الاحتفاظ بالبيانات الحالية")
@@ -594,7 +661,7 @@ def main() -> int:
         logger.info(f"✅ تم جلب {len(flights)} رحلة")
         
         # فلترة رحلات اليوم الكامل (00:00 - 23:59)
-        live_flights = filter_today_flights(flights)
+        live_flights = without_hidden_flights(filter_today_flights(flights))
         live_payload = [asdict(f) for f in live_flights]
         
         # جميع الرحلات للأرشيف
@@ -608,8 +675,10 @@ def main() -> int:
         write_json(LIVE_JSON, live_payload)
         write_json(ARCHIVE_JSON, archive_payload)
         
-        logger.info(f"💾 رحلات اليوم: {len(live_payload)}")
-        logger.info(f"📚 الأرشيف الكامل: {len(archive_payload)}")
+        live_arr, live_dep = count_by_direction(live_payload)
+        arch_arr, arch_dep = count_by_direction(archive_payload)
+        logger.info(f"💾 رحلات اليوم: {len(live_payload)} (🛬 {live_arr} | 🛫 {live_dep})")
+        logger.info(f"📚 الأرشيف الكامل: {len(archive_payload)} (🛬 {arch_arr} | 🛫 {arch_dep})")
         
         # تصدير إلى Excel
         if HAS_EXCEL:
@@ -622,6 +691,10 @@ def main() -> int:
             message="تم التحديث بنجاح",
             live_count=len(live_payload),
             archive_count=len(archive_payload),
+            live_arrivals=live_arr,
+            live_departures=live_dep,
+            archive_arrivals=arch_arr,
+            archive_departures=arch_dep,
         )
         
         logger.info("✨ اكتمل التحديث بنجاح!")
