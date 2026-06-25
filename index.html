@@ -262,6 +262,36 @@
     .flight-row:active { background: #f8fafc; }
     .flight-row.expanded { background: #f8fafc; }
 
+    .flight-row.wide-body,
+    .flight-card.wide-body {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.14), rgba(255, 255, 255, 0) 72%);
+      box-shadow: inset 3px 0 0 #f59e0b;
+    }
+
+    .flight-row.wide-body.expanded {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.18), #f8fafc 72%);
+    }
+
+    .flight-row.wide-body .flight-row-code,
+    .flight-card.wide-body .flight-code {
+      color: #b45309;
+      font-weight: 900;
+    }
+
+    .wide-body-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-right: 6px;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.16);
+      color: #b45309;
+      font-size: 10px;
+      font-weight: 800;
+      vertical-align: middle;
+    }
+
     .status-dot {
       width: 10px;
       height: 10px;
@@ -625,6 +655,7 @@
         <span><i class="status-dot boarding"></i>صعود</span>
         <span><i class="status-dot active"></i>بالجو</span>
         <span><i class="status-dot done"></i>وصلت</span>
+        <span><span class="wide-body-tag">🛩️ عريض</span>بدن عريض</span>
       </div>
     </section>
 
@@ -678,6 +709,7 @@
       mode: "arrivals",
       archiveFilter: "all",
       statusFilter: "",
+      wideBodyCodes: new Set(),
     };
 
     const params = new URLSearchParams(window.location.search);
@@ -731,6 +763,14 @@
 
     function flightDirection(row) {
       return (row.direction || "departure").toLowerCase();
+    }
+
+    function normalizeFlightCode(code) {
+      return String(code || "").replace(/\s+/g, "").toUpperCase();
+    }
+
+    function isWideBodyFlight(row) {
+      return state.wideBodyCodes.has(normalizeFlightCode(row.code));
     }
 
     function isHiddenStatus(status) {
@@ -812,6 +852,7 @@
     function renderFlightDetails(row) {
       const isArrival = flightDirection(row) === "arrival";
       const parts = [
+        isWideBodyFlight(row) ? "🛩️ بدن عريض" : "",
         row.airline ? `🏢 ${escapeHtml(row.airline)}` : "",
         row.status ? `${statusEmoji(row.status)} ${escapeHtml(row.status)}` : "",
         row.sourceDestination ? `📍 ${escapeHtml(row.sourceDestination)}` : "",
@@ -909,19 +950,21 @@
         const key = flightKey(row);
         const dest = row.destination || "-";
         const time = formatFlightTime(row.stdEtd);
+        const wideBody = isWideBodyFlight(row);
+        const wideClass = wideBody ? " wide-body" : "";
 
         return `
-          <button type="button" class="flight-row" data-key="${escapeHtml(key)}" aria-expanded="false">
+          <button type="button" class="flight-row${wideClass}" data-key="${escapeHtml(key)}" aria-expanded="false">
             <span class="status-dot ${dotClass}" title="${escapeHtml(st)}"></span>
-            <span class="flight-row-code">${escapeHtml(row.code || "-")}</span>
+            <span class="flight-row-code">${wideBody ? '<span class="wide-body-tag">🛩️</span>' : ""}${escapeHtml(row.code || "-")}</span>
             <span class="flight-row-dest">${escapeHtml(dest)}</span>
             <span class="flight-row-time">${escapeHtml(time)}</span>
             <div class="flight-details">${renderFlightDetails(row)}</div>
           </button>
-          <article class="flight-card">
+          <article class="flight-card${wideClass}">
             <div class="flight-head">
               <div>
-                <div class="flight-code">${dirEmoji} ${escapeHtml(row.code || "-")}</div>
+                <div class="flight-code">${dirEmoji} ${wideBody ? '<span class="wide-body-tag">🛩️ عريض</span>' : ""}${escapeHtml(row.code || "-")}</div>
                 <div class="flight-airline">🏢 ${escapeHtml(row.airline || "-")}</div>
               </div>
               <span class="status-badge ${stClass}">${stEmoji} ${escapeHtml(st)}</span>
@@ -1018,14 +1061,17 @@
       els.refreshBtn.disabled = true;
       els.refreshBtn.textContent = "⏳ ...";
       try {
-        const [meta, live, archive] = await Promise.all([
+        const [meta, live, archive, wideBody] = await Promise.all([
           fetchJson("metadata.json", {}),
           fetchJson("live_flights.json", []),
           fetchJson("archive_flights.json", []),
+          fetchJson("wide_body_flights.json", { flightCodes: [] }),
         ]);
         state.meta = meta || {};
         state.live = Array.isArray(live) ? live : [];
         state.archive = Array.isArray(archive) ? archive : [];
+        const codes = Array.isArray(wideBody?.flightCodes) ? wideBody.flightCodes : [];
+        state.wideBodyCodes = new Set(codes.map(normalizeFlightCode).filter(Boolean));
         renderMeta();
         populateStatusChips();
         renderFlights();
