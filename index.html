@@ -54,11 +54,80 @@
     }
 
     .header-top {
+      margin-bottom: 12px;
+    }
+
+    .refresh-btn {
+      border: 1px solid rgba(255,255,255,.35);
+      background: rgba(255,255,255,.2);
+      color: #fff;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      min-height: 36px;
+      flex-shrink: 0;
+    }
+
+    .refresh-btn:active { transform: scale(0.97); }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 14px;
+      padding: 10px 8px;
+      backdrop-filter: blur(8px);
+      text-align: center;
+      min-width: 0;
+    }
+
+    .stat .label {
+      font-size: 10px;
+      opacity: 0.9;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .stat .value {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .update-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10px;
-      margin-bottom: 14px;
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 14px;
+      backdrop-filter: blur(8px);
+    }
+
+    .update-text {
+      font-size: 12px;
+      opacity: 0.95;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .update-text #updatedAt {
+      font-weight: 700;
     }
 
     .brand {
@@ -84,53 +153,6 @@
       margin: 2px 0 0;
       font-size: 12px;
       opacity: 0.85;
-    }
-
-    .refresh-btn {
-      border: 1px solid rgba(255,255,255,.35);
-      background: rgba(255,255,255,.15);
-      color: #fff;
-      border-radius: 14px;
-      padding: 10px 14px;
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      backdrop-filter: blur(8px);
-      min-height: 44px;
-    }
-
-    .refresh-btn:active { transform: scale(0.97); }
-
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
-
-    .stat {
-      background: rgba(255,255,255,.14);
-      border: 1px solid rgba(255,255,255,.2);
-      border-radius: 16px;
-      padding: 12px 14px;
-      backdrop-filter: blur(8px);
-    }
-
-    .stat .label {
-      font-size: 11px;
-      opacity: 0.9;
-      margin-bottom: 4px;
-    }
-
-    .stat .value {
-      font-size: 22px;
-      font-weight: 800;
-      line-height: 1.1;
-    }
-
-    .stat .sub {
-      font-size: 11px;
-      opacity: 0.8;
-      margin-top: 4px;
     }
 
     .status-bar {
@@ -575,14 +597,14 @@
     }
 
     body.embed { padding-bottom: 16px; }
-    body.embed .header .refresh-btn,
+    body.embed .header .update-bar,
     body.embed .bottom-nav,
     body.embed .hint { display: none; }
     body.embed .app { max-width: none; }
 
     @media (min-width: 768px) {
       .app { max-width: 960px; padding: 24px 20px 0; }
-      .stats { grid-template-columns: repeat(4, 1fr); }
+      .stats { grid-template-columns: repeat(3, 1fr); }
       .dot-legend { display: none; }
       .flights {
         display: grid;
@@ -612,27 +634,26 @@
             <p>Muscat International Airport · MCT</p>
           </div>
         </div>
-        <button class="refresh-btn" id="refreshBtn" type="button">🔄 تحديث</button>
       </div>
 
       <div class="stats">
         <div class="stat">
-          <div class="label">🛬 وصول اليوم</div>
+          <div class="label">🛬 وصول</div>
           <div class="value" id="arrivalsCount">0</div>
         </div>
         <div class="stat">
-          <div class="label">🛫 مغادرة اليوم</div>
+          <div class="label">🛫 مغادرة</div>
           <div class="value" id="departuresCount">0</div>
         </div>
         <div class="stat">
-          <div class="label">🗂️ الأرشيف</div>
+          <div class="label">🗂️ أرشيف</div>
           <div class="value" id="archiveCount">0</div>
-          <div class="sub" id="archiveBreakdown">🛬 0 · 🛫 0</div>
         </div>
-        <div class="stat">
-          <div class="label">🕐 آخر تحديث</div>
-          <div class="value" id="updatedAt" style="font-size:14px">-</div>
-        </div>
+      </div>
+
+      <div class="update-bar">
+        <div class="update-text">🕐 آخر تحديث: <span id="updatedAt">-</span></div>
+        <button class="refresh-btn" id="refreshBtn" type="button">🔄 تحديث</button>
       </div>
 
       <div class="status-bar">
@@ -742,7 +763,6 @@
       arrivalsCount: document.getElementById("arrivalsCount"),
       departuresCount: document.getElementById("departuresCount"),
       archiveCount: document.getElementById("archiveCount"),
-      archiveBreakdown: document.getElementById("archiveBreakdown"),
       updatedAt: document.getElementById("updatedAt"),
       statusPill: document.getElementById("statusPill"),
       flightsList: document.getElementById("flightsList"),
@@ -1000,14 +1020,11 @@
       const meta = state.meta || {};
       const liveArr = meta.liveArrivalsCount ?? countLive("arrival");
       const liveDep = meta.liveDeparturesCount ?? countLive("departure");
-      const archArr = meta.archiveArrivalsCount ?? countArchive("arrival");
-      const archDep = meta.archiveDeparturesCount ?? countArchive("departure");
       const archTotal = meta.archiveFlightsCount ?? state.archive.length;
 
       els.arrivalsCount.textContent = liveArr;
       els.departuresCount.textContent = liveDep;
       els.archiveCount.textContent = archTotal;
-      els.archiveBreakdown.textContent = `🛬 ${archArr} · 🛫 ${archDep}`;
       els.updatedAt.textContent = formatDate(meta.updatedAt);
 
       const status = meta.status || "unknown";
@@ -1047,7 +1064,6 @@
       els.arrivalsCount.textContent = "—";
       els.departuresCount.textContent = "—";
       els.archiveCount.textContent = "—";
-      els.archiveBreakdown.textContent = "—";
       els.updatedAt.textContent = "—";
     }
 
