@@ -834,6 +834,10 @@
       return state.wideBodyCodes.has(normalizeFlightCode(row.code));
     }
 
+    function isSearching() {
+      return els.searchInput.value.trim().length > 0;
+    }
+
     function isHiddenStatus(status) {
       const key = String(status || "").toLowerCase();
       return [
@@ -847,8 +851,33 @@
       ].some((phrase) => key.includes(phrase));
     }
 
+    /** Hide completed/boarding noise in the default board — not while searching. */
     function visibleFlights(rows) {
+      if (isSearching()) return rows.slice();
       return rows.filter((row) => !isHiddenStatus(row.status));
+    }
+
+    function combinedSearchPool() {
+      const map = new Map();
+      for (const row of state.archive) map.set(flightKey(row), row);
+      for (const row of state.live) map.set(flightKey(row), row);
+      return [...map.values()];
+    }
+
+    function rowSearchHaystack(row) {
+      return [
+        row.code,
+        normalizeFlightCode(row.code),
+        row.date,
+        row.destination,
+        row.sourceDestination,
+        row.airline,
+        row.status,
+        row.stdEtd,
+        row.gate,
+        row.terminal,
+        flightDirection(row) === "arrival" ? "وصول arrival" : "مغادرة departure",
+      ].join(" ").toLowerCase();
     }
 
     function formatDate(value) {
@@ -934,6 +963,10 @@
     }
 
     function baseRows() {
+      if (isSearching()) {
+        return combinedSearchPool();
+      }
+
       if (state.mode === "archive") {
         let rows = visibleFlights(state.archive);
         if (state.archiveFilter === "arrival") rows = rows.filter((f) => flightDirection(f) === "arrival");
@@ -945,15 +978,14 @@
     }
 
     function filteredRows() {
-      const q = els.searchInput.value.trim().toLowerCase();
+      const qRaw = els.searchInput.value.trim();
+      const q = qRaw.toLowerCase();
+      const qCode = normalizeFlightCode(qRaw).toLowerCase();
       const status = state.statusFilter;
 
       return baseRows().filter((row) => {
-        const haystack = [
-          row.code, row.date, row.destination, row.sourceDestination,
-          row.airline, row.status, row.stdEtd, row.gate, row.terminal,
-        ].join(" ").toLowerCase();
-        const matchesText = !q || haystack.includes(q);
+        const haystack = rowSearchHaystack(row);
+        const matchesText = !q || haystack.includes(q) || (qCode && haystack.includes(qCode));
         const matchesStatus = !status || (row.status || "") === status;
         return matchesText && matchesStatus;
       });
@@ -987,7 +1019,9 @@
       if (!rows.length) {
         const hasBase = baseRows().length > 0;
         const msg = hasBase
-          ? "🔎 لا توجد نتائج مطابقة للبحث"
+          ? (isSearching()
+            ? "🔎 لا توجد نتائج — جرّب رقم الرحلة بدون مسافات أو انتقل إلى 🗂️ الأرشيف"
+            : "🔎 لا توجد نتائج مطابقة للبحث")
           : state.mode === "archive"
             ? "📭 الأرشيف فارغ حالياً"
             : state.mode === "arrivals"
@@ -1151,7 +1185,10 @@
       }
     }
 
-    els.searchInput.addEventListener("input", renderFlights);
+    els.searchInput.addEventListener("input", () => {
+      populateStatusChips();
+      renderFlights();
+    });
     els.refreshBtn.addEventListener("click", loadData);
     els.navBtns.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));
     els.statNavBtns.forEach((btn) => btn.addEventListener("click", () => setMode(btn.dataset.mode)));

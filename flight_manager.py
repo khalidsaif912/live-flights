@@ -660,8 +660,8 @@ def main() -> int:
         
         logger.info(f"✅ تم جلب {len(flights)} رحلة")
         
-        # فلترة رحلات اليوم الكامل (00:00 - 23:59)
-        live_flights = without_hidden_flights(filter_today_flights(flights))
+        # فلترة رحلات اليوم الكامل (00:00 - 23:59) — كل الحالات كما في جدول المطار
+        live_flights = filter_today_flights(flights)
         live_payload = [asdict(f) for f in live_flights]
         
         # جميع الرحلات للأرشيف
