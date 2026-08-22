@@ -1,15 +1,15 @@
 {
   "status": "success",
   "message": "تم التحديث بنجاح",
-  "liveFlightsCount": 0,
-  "archiveFlightsCount": 14855,
-  "liveArrivalsCount": 0,
-  "liveDeparturesCount": 0,
-  "archiveArrivalsCount": 7374,
-  "archiveDeparturesCount": 7481,
+  "liveFlightsCount": 249,
+  "archiveFlightsCount": 15104,
+  "liveArrivalsCount": 123,
+  "liveDeparturesCount": 126,
+  "archiveArrivalsCount": 7497,
+  "archiveDeparturesCount": 7607,
   "sourceUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
   "arrivalUrl": "https://www.muscatairport.co.om/flightstatusframe?type=1",
   "departureUrl": "https://www.muscatairport.co.om/flightstatusframe?type=2",
-  "updatedAt": "2026-08-21T23:47:13+00:00",
+  "updatedAt": "2026-08-22T00:02:25+00:00",
   "timezone": "Asia/Muscat"
 }
